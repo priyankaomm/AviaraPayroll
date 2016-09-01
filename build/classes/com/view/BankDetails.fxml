@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" fx:id="employee" prefHeight="372.0" prefWidth="460.0" stylesheets="@../aviara/style/style.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.aviara.controller.BankDetailsController">
+   <children>
+      <Pane id="top1" prefHeight="15.0" prefWidth="460.0" />
+      <Pane id="top_section1" prefHeight="32.0" prefWidth="460.0">
+         <children>
+            <Label id="title" layoutX="9.0" text="Bank Details" />
+            <Label id="close-btn" fx:id="close_btn" layoutX="418.0" layoutY="-7.0" prefHeight="42.0" prefWidth="42.0" />
+         </children>
+      </Pane>
+      <Pane id="top1" layoutY="32.0" prefHeight="15.0" prefWidth="460.0" />
+      <Pane layoutX="-2.0" layoutY="47.0" prefHeight="326.0" prefWidth="460.0">
+         <children>
+            <Label layoutX="14.0" layoutY="12.0" text="Bank Details" />
+            <Pane id="info_panel" layoutX="4.0" layoutY="37.0" prefHeight="130.0" prefWidth="450.0">
+               <children>
+                  <Label layoutX="14.0" layoutY="14.0" text="Bank Name" />
+                  <TextField fx:id="bank_name" layoutX="146.0" layoutY="16.0" prefHeight="21.0" prefWidth="246.0" />
+                  <Label layoutX="14.0" layoutY="48.0" text="Bank Account No" />
+                  <TextField fx:id="acc_no" layoutX="146.0" layoutY="50.0" prefHeight="21.0" prefWidth="246.0" />
+                  <Label layoutX="14.0" layoutY="87.0" text="IFSC Code" />
+                  <TextField fx:id="ifsc_code" layoutX="146.0" layoutY="89.0" prefHeight="21.0" prefWidth="89.0" />
+                  <Label layoutX="257.0" layoutY="87.0" text="PF Number" />
+                  <TextField fx:id="pf_no" layoutX="351.0" layoutY="89.0" prefHeight="21.0" prefWidth="82.0" />
+               </children>
+            </Pane>
+            <Label layoutX="14.0" layoutY="169.0" text="Id Details" />
+            <Pane id="info_panel" layoutX="5.0" layoutY="194.0" prefHeight="88.0" prefWidth="450.0">
+               <children>
+                  <Label layoutX="14.0" layoutY="14.0" text="Pan Card No" />
+                  <TextField fx:id="pan_no" layoutX="109.0" layoutY="16.0" prefHeight="21.0" prefWidth="106.0" />
+                  <Label layoutX="240.0" layoutY="14.0" text="Voter Id" />
+                  <TextField fx:id="voter_id" layoutX="312.0" layoutY="16.0" prefHeight="21.0" prefWidth="106.0" />
+                  <Label layoutX="14.0" layoutY="49.0" text="Adhar No" />
+                  <TextField fx:id="adhar_no" layoutX="109.0" layoutY="51.0" prefHeight="21.0" prefWidth="184.0" />
+               </children>
+            </Pane>
+            <Button layoutX="379.0" layoutY="286.0" mnemonicParsing="false" onAction="#close" prefHeight="32.0" prefWidth="72.0" text="Finish" />
+            <Button layoutX="248.0" layoutY="286.0" mnemonicParsing="false" onAction="#openLeaveForm" prefHeight="32.0" prefWidth="62.0" text="Back" />
+            <Button layoutX="314.0" layoutY="286.0" mnemonicParsing="false" onAction="#saveBankDetails" prefHeight="32.0" prefWidth="62.0" text="Save" />
+            <Label fx:id="e_id" layoutX="395.0" layoutY="12.0" prefHeight="25.0" prefWidth="39.0" />
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>

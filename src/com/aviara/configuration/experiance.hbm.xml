@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--<!DOCTYPE hibernate-mapping PUBLIC
+  "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+  "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">-->
+
+  <!DOCTYPE hibernate-mapping SYSTEM "hibernate-mapping-3.0.dtd" >
+  
+<hibernate-mapping>
+<class name="com.aviara.bean.Experiance" table="emp_experiance">
+      <id name="id" column="id" type="integer"> 
+          <generator class="increment"></generator> 
+      </id> 
+        <property name="experiance" column="experiance" type="string"></property> 
+        <property name="compony_name" column="compony_name" type="string"></property>   
+        <property name="designation" column="designation" type="string"></property> 
+        <property name="emp_id" column="emp_id" type="string"></property>
+    </class>
+  
+  
+
+</hibernate-mapping>

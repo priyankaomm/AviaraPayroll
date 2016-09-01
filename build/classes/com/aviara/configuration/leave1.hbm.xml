@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE hibernate-mapping SYSTEM "hibernate-mapping-3.0.dtd" >
+
+<hibernate-mapping>
+
+  <class name="com.aviara.bean.Leave1" table="leave_info">
+      <id name="leave_id" column="leave_id" type="integer"> 
+          <generator class="increment"></generator> 
+      </id> 
+        <property name="leave_name" column="leave_name" type="string"></property> 
+        <property name="no_of_leave" column="no_of_leave" type="integer"></property>
+        <property name="monthly" column="monthly" type="integer"></property>
+        <property name="carryForward" column="carryForward" type="integer"></property>
+      </class>
+</hibernate-mapping>

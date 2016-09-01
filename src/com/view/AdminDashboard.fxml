@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.web.*?>
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" fx:id="content" prefHeight="689.0" prefWidth="1320.0" stylesheets="@../aviara/style/style.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.aviara.controller.AdminDashboardController">
+   <children>
+      <Pane>
+         <children>
+            <Pane id="top_pane" prefHeight="55.0" prefWidth="1320.0">
+               <children>
+                  <ImageView fitHeight="43.0" fitWidth="146.0" layoutX="26.0" layoutY="6.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../aviara/images/aviara.png" />
+                     </image>
+                  </ImageView>
+                  <Pane id="compony_pane" fx:id="compony_pane" layoutX="985.0" layoutY="12.0" onMouseEntered="#openComponyMenu" prefHeight="43.0" prefWidth="52.0" />
+                  <Pane id="emp_pane" layoutX="1051.0" layoutY="12.0" onMouseEntered="#openEmpMenu" prefHeight="43.0" prefWidth="52.0" />
+                  <Pane id="home_pane" fx:id="compony_pane1" layoutX="923.0" layoutY="12.0" prefHeight="43.0" prefWidth="40.0" />
+                  <Pane id="report_pane" layoutX="1116.0" layoutY="12.0" onMouseEntered="#openReportMenu" prefHeight="43.0" prefWidth="52.0" />
+                  <Pane id="logout_pane" layoutX="1184.0" layoutY="12.0" onMouseClicked="#handleLogout" prefHeight="43.0" prefWidth="52.0" />
+               </children>
+            </Pane>
+            <Pane id="top_section" layoutY="56.0" prefHeight="24.0" prefWidth="1320.0" />
+            <Pane id="back" fx:id="back" layoutX="177.0" layoutY="80.0" onMouseEntered="#animation" prefHeight="608.0" prefWidth="1143.0">
+               <children>
+                  <Pane fx:id="date_pane" layoutX="855.0" layoutY="705.0" prefHeight="24.0" prefWidth="168.0">
+                     <children>
+                        <Label id="t2" fx:id="today" alignment="CENTER" layoutX="-4.0" layoutY="-3.0" prefHeight="28.0" prefWidth="177.0" text="22 August 2016" />
+                     </children>
+                  </Pane>
+                  <Pane fx:id="time_pane" layoutX="1333.0" layoutY="521.0" prefHeight="93.0" prefWidth="104.0">
+                     <children>
+                        <Label id="t2" fx:id="day" layoutX="11.0" layoutY="14.0" text="Monday" />
+                        <Label id="t2" fx:id="time_label" layoutX="11.0" layoutY="46.0" text="9:50 AM" />
+                     </children>
+                  </Pane>
+                  <Pane id="main_pane" fx:id="main_pane" layoutX="-1.0" layoutY="3.0" prefHeight="601.0" prefWidth="1117.0" />
+                  <Pane id="c_menu" fx:id="c_menu" layoutX="805.0" onMouseExited="#closeComponyMenu" prefHeight="167.0" prefWidth="150.0">
+                     <children>
+                        <Label id="mitems" alignment="CENTER" layoutX="-1.0" layoutY="1.0" onMouseClicked="#viewCompony" prefHeight="24.0" prefWidth="200.0" text="Compony Settings" />
+                        <Label id="mitems" alignment="CENTER" layoutY="25.0" onMouseClicked="#viewBranch" prefHeight="24.0" prefWidth="200.0" text="Add Branch" />
+                        <Label id="mitems" alignment="CENTER" layoutY="53.0" onMouseClicked="#viewCalender" prefHeight="24.0" prefWidth="200.0" text="Holiday Calender" />
+                        <Label id="mitems" alignment="CENTER" layoutY="80.0" onMouseClicked="#viewAllowance" prefHeight="24.0" prefWidth="200.0" text="Allowance" />
+                        <Label id="mitems" alignment="CENTER" layoutY="104.0" onMouseClicked="#viewDeduction" prefHeight="24.0" prefWidth="200.0" text="Deduction" />
+                        <Label id="mitems" alignment="CENTER" layoutX="-1.0" layoutY="130.0" onMouseClicked="#viewDepartment" prefHeight="24.0" prefWidth="200.0" text="Department" />
+                     </children>
+                  </Pane>
+                  <Pane id="e_menu" fx:id="e_menu" layoutX="884.0" onMouseExited="#closeEmpMenu" prefHeight="167.0" prefWidth="150.0">
+                     <children>
+                        <Label id="mitems" alignment="CENTER" layoutX="-1.0" layoutY="2.0" onMouseClicked="#handleAddEmployee" prefHeight="25.0" prefWidth="200.0" text="Add Employee" />
+                        <Label id="mitems" alignment="CENTER" layoutY="26.0" onMouseClicked="#viewEmployee" prefHeight="25.0" prefWidth="200.0" text="Employees" />
+                        <Label id="mitems" alignment="CENTER" layoutY="50.0" onMouseClicked="#viewPaymentDetails" prefHeight="25.0" prefWidth="200.0" text="Payment Details" />
+                        <Label id="mitems" alignment="CENTER" layoutY="77.0" onMouseClicked="#viewEmpDeduction" prefHeight="25.0" prefWidth="200.0" text="Deductions" />
+                        <Label id="mitems" alignment="CENTER" layoutX="-1.0" layoutY="108.0" onMouseClicked="#viewBank" prefHeight="25.0" prefWidth="200.0" text="Attendence" />
+                        <Label id="mitems" alignment="CENTER" layoutY="132.0" onMouseClicked="#viewLeave" prefHeight="25.0" prefWidth="200.0" text="Leaves" />
+                     </children>
+                  </Pane>
+                  <Pane id="r_menu" fx:id="r_menu" layoutX="941.0" onMouseExited="#closeReportMenu" prefHeight="93.0" prefWidth="200.0">
+                     <children>
+                        <Label id="mitems" alignment="CENTER" layoutX="-1.0" layoutY="2.0" onMouseClicked="#handleAddEmployee" prefHeight="25.0" prefWidth="200.0" text="Salary Report" />
+                        <Label id="mitems" alignment="CENTER" layoutY="28.0" prefHeight="25.0" prefWidth="200.0" text="Attendance Report" />
+                     </children>
+                  </Pane>
+               </children>
+            </Pane>
+            <Pane id="side_back" layoutX="1.0" layoutY="80.0" prefHeight="608.0" prefWidth="177.0">
+               <children>
+                  <Pane layoutX="4.0" layoutY="20.0">
+                     <children>
+                        <Pane id="side_menu_panel" prefHeight="224.0" prefWidth="168.0">
+                           <children>
+                              <Label id="emp_icon" layoutX="6.0" layoutY="6.0" prefHeight="14.0" prefWidth="157.0" text="Employes" />
+                              <Label id="t_icon" layoutX="6.0" layoutY="41.0" prefHeight="14.0" prefWidth="157.0" text="Transaction" />
+                              <Label id="c_icon" layoutX="6.0" layoutY="74.0" prefHeight="14.0" prefWidth="157.0" text="Compony" />
+                              <Label id="r_icon" layoutX="6.0" layoutY="106.0" prefHeight="14.0" prefWidth="157.0" text="Reports" />
+                              <Label id="a_icon" layoutX="6.0" layoutY="140.0" prefHeight="14.0" prefWidth="157.0" text="Attendance" />
+                              <Label id="cl_icon" layoutX="6.0" layoutY="173.0" prefHeight="14.0" prefWidth="157.0" text="Holiday Calender" />
+                           </children>
+                        </Pane>
+                     </children>
+                  </Pane>
+                  <Pane id="side_menu_panel" layoutX="4.0" layoutY="274.0" prefHeight="331.0" prefWidth="168.0" />
+                  <Label contentDisplay="CENTER" layoutX="4.0" layoutY="-4.0" prefHeight="25.0" prefWidth="168.0" text="Quick Launch" />
+                  <Label contentDisplay="CENTER" layoutX="4.0" layoutY="249.0" prefHeight="25.0" prefWidth="168.0" text="Notifications" />
+               </children>
+            </Pane>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>

@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.collections.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" fx:id="employee" prefHeight="484.0" prefWidth="740.0" stylesheets="@../aviara/style/style.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.aviara.controller.EmployeeController">
+   <children>
+      <Pane prefHeight="484.0" prefWidth="740.0">
+         <children>
+            <Pane id="top1" layoutY="36.0" prefHeight="15.0" prefWidth="740.0" />
+            <Pane layoutY="51.0" prefHeight="385.0" prefWidth="740.0">
+               <children>
+                  <Pane layoutX="7.0" layoutY="6.0" prefHeight="395.0" prefWidth="728.0">
+                     <children>
+                        <Pane id="info_panel" fx:id="personal_pane" layoutX="3.0" layoutY="34.0" prefHeight="220.0" prefWidth="728.0">
+                           <children>
+                              <TextField fx:id="fname" layoutX="102.0" layoutY="52.0" prefHeight="21.0" prefWidth="105.0" />
+                              <TextField fx:id="mname" layoutX="273.0" layoutY="55.0" prefHeight="21.0" prefWidth="105.0" />
+                              <TextField fx:id="lname" layoutX="433.0" layoutY="55.0" prefHeight="21.0" prefWidth="125.0" />
+                              <Label layoutX="14.0" layoutY="48.0" prefHeight="25.0" prefWidth="88.0" text="First Name :" />
+                              <Label layoutX="221.0" layoutY="51.0" prefHeight="25.0" prefWidth="52.0" text="M. :" />
+                              <Label layoutX="378.0" layoutY="51.0" prefHeight="25.0" prefWidth="62.0" text="Last : " />
+                              <Label layoutX="173.0" layoutY="14.0" prefHeight="25.0" prefWidth="69.0" text="Gender" />
+                              <RadioButton fx:id="male" layoutX="247.0" layoutY="13.0" mnemonicParsing="false" text="Male" />
+                              <RadioButton fx:id="female" layoutX="336.0" layoutY="13.0" mnemonicParsing="false" text="Female" />
+                              <Label layoutX="417.0" layoutY="14.0" prefHeight="25.0" prefWidth="105.0" text="Date Of Birth" />
+                              <Label layoutX="14.0" layoutY="14.0" prefHeight="25.0" prefWidth="62.0" text="Emp Id" />
+                              <TextField fx:id="emp_id" layoutX="83.0" layoutY="18.0" prefHeight="21.0" prefWidth="81.0" />
+                              <Label layoutX="13.0" layoutY="87.0" text="Country" />
+                              <Label layoutX="220.0" layoutY="86.0" text="State" />
+                              <Label layoutX="422.0" layoutY="87.0" text="City" />
+                              <TextField fx:id="city1" layoutX="477.0" layoutY="88.0" prefHeight="21.0" prefWidth="113.0" />
+                              <Label layoutX="12.0" layoutY="128.0" text="Address" />
+                              <TextField fx:id="address1" layoutX="102.0" layoutY="130.0" prefHeight="21.0" prefWidth="307.0" />
+                              <Label layoutX="426.0" layoutY="130.0" text="Pincode" />
+                              <TextField fx:id="pincode1" layoutX="509.0" layoutY="129.0" prefHeight="21.0" prefWidth="93.0" />
+                              <Label layoutX="12.0" layoutY="173.0" text="Contact No" />
+                              <ComboBox fx:id="day" layoutX="506.0" layoutY="14.0" prefHeight="25.0" prefWidth="62.0">
+                                 <items>
+                                    <FXCollections fx:factory="observableArrayList">
+                                       <String fx:value="01" />
+                                       <String fx:value="02" />
+                                       <String fx:value="03" />
+                                       <String fx:value="04" />
+                                       <String fx:value="05" />
+                                       <String fx:value="06" />
+                                       <String fx:value="07" />
+                                       <String fx:value="08" />
+                                       <String fx:value="09" />
+                                       <String fx:value="10" />
+                                       <String fx:value="11" />
+                                       <String fx:value="12" />
+                                       <String fx:value="13" />
+                                       <String fx:value="14" />
+                                       <String fx:value="15" />
+                                       <String fx:value="16" />
+                                       <String fx:value="17" />
+                                       <String fx:value="18" />
+                                       <String fx:value="19" />
+                                       <String fx:value="20" />
+                                       <String fx:value="21" />
+                                       <String fx:value="22" />
+                                       <String fx:value="23" />
+                                       <String fx:value="24" />
+                                       <String fx:value="25" />
+                                       <String fx:value="26" />
+                                       <String fx:value="27" />
+                                       <String fx:value="28" />
+                                       <String fx:value="29" />
+                                       <String fx:value="30" />
+                                       <String fx:value="31" />
+
+                                    </FXCollections>
+                                 </items>
+                              </ComboBox>
+                              <ComboBox fx:id="month" layoutX="570.0" layoutY="14.0" prefHeight="25.0" prefWidth="62.0">
+                                 <items>
+                                    <FXCollections fx:factory="observableArrayList">
+                                       <String fx:value="01" />
+                                       <String fx:value="02" />
+                                       <String fx:value="03" />
+                                       <String fx:value="04" />
+                                       <String fx:value="05" />
+                                       <String fx:value="06" />
+                                       <String fx:value="07" />
+                                       <String fx:value="08" />
+                                       <String fx:value="09" />
+                                       <String fx:value="10" />
+                                       <String fx:value="11" />
+                                       <String fx:value="12" />
+                                    </FXCollections>
+                                 </items>
+                              </ComboBox>
+                              <ComboBox fx:id="year" layoutX="633.0" layoutY="13.0" prefHeight="25.0" prefWidth="83.0">
+                                 <items>
+                                    <FXCollections fx:factory="observableArrayList">
+                                       
+                                       <String fx:value="1971" />
+                                       <String fx:value="1972" />
+                                       <String fx:value="1973" />
+                                       <String fx:value="1974" />
+                                       <String fx:value="1975" />
+                                       <String fx:value="1976" />
+                                       <String fx:value="1977" />
+                                       <String fx:value="1978" />
+                                       <String fx:value="1979" />
+                                       <String fx:value="1980" />
+                                       <String fx:value="1981" />
+                                       <String fx:value="1982" />
+                                       <String fx:value="1983" />
+                                       <String fx:value="1984" />
+                                       <String fx:value="1985" />
+                                       <String fx:value="1986" />
+                                       <String fx:value="1987" />
+                                       <String fx:value="1988" />
+                                       <String fx:value="1989" />
+                                       <String fx:value="1990" />
+                                       <String fx:value="1991" />
+                                       <String fx:value="1992" />
+                                       <String fx:value="1993" />
+                                       <String fx:value="1994" />
+                                       <String fx:value="1995" />
+                                       <String fx:value="1996" />
+                                       <String fx:value="1997" />
+                                       <String fx:value="1998" />
+                                       <String fx:value="1999" />
+                                       <String fx:value="2000" />
+                                    </FXCollections>
+                                 </items>
+                              </ComboBox>
+                              <TextField fx:id="country1" layoutX="102.0" layoutY="89.0" prefHeight="21.0" prefWidth="105.0" />
+                              <TextField fx:id="state1" layoutX="277.0" layoutY="90.0" prefHeight="21.0" prefWidth="137.0" />
+                              <TextField fx:id="contact" layoutX="94.0" layoutY="175.0" prefHeight="21.0" prefWidth="113.0" />
+                              <Label layoutX="215.0" layoutY="173.0" text="Alt Contact" />
+                              <TextField fx:id="alt_contact" layoutX="302.0" layoutY="175.0" prefHeight="21.0" prefWidth="125.0" />
+                              <Label layoutX="433.0" layoutY="173.0" text="Email Id" />
+                              <TextField fx:id="email" layoutX="499.0" layoutY="175.0" prefHeight="21.0" prefWidth="212.0" />
+                              <Label layoutX="569.0" layoutY="53.0" prefHeight="25.0" prefWidth="81.0" text="Device Id" />
+                              <TextField fx:id="device_id" layoutX="650.0" layoutY="54.0" prefHeight="21.0" prefWidth="63.0" />
+                           </children>
+                        </Pane>
+                        <Label layoutX="14.0" layoutY="9.0" prefHeight="17.0" prefWidth="171.0" text="Personal Details" />
+                        <Pane id="info_panel" layoutY="279.0" prefHeight="101.0" prefWidth="728.0">
+                           <children>
+                              <TextField fx:id="designation" layoutX="583.0" layoutY="62.0" prefHeight="25.0" prefWidth="125.0" />
+                              <Label layoutX="485.0" layoutY="62.0" prefHeight="25.0" prefWidth="88.0" text="Designation" />
+                              <ComboBox fx:id="dept" layoutX="349.0" layoutY="62.0" prefHeight="25.0" prefWidth="125.0">
+                                 <items>
+                                    <FXCollections fx:factory="observableArrayList">
+                                       <String fx:value="IT" />
+                                       <String fx:value="HR" />
+                                       <String fx:value="Admin" />
+                                    </FXCollections>
+                                 </items>
+                              </ComboBox>
+                              <Label layoutX="265.0" layoutY="62.0" prefHeight="25.0" prefWidth="105.0" text="Department" />
+                              <DatePicker fx:id="doj" layoutX="127.0" layoutY="15.0" prefHeight="24.0" prefWidth="125.0" />
+                              <Label layoutX="14.0" layoutY="14.0" prefHeight="25.0" prefWidth="113.0" text="Date Of Joining" />
+                              <Label layoutX="485.0" layoutY="15.0" prefHeight="25.0" prefWidth="62.0" text="Branch" />
+                              <ComboBox fx:id="branch" layoutX="583.0" layoutY="14.0" prefHeight="25.0" prefWidth="125.0">
+                                 <items>
+                                    <FXCollections fx:factory="observableArrayList">
+                                       <String fx:value="Wakdewadi" />
+                                       <String fx:value="Hadapsar" />
+                                       <String fx:value="Hinjewadi" />
+                                    </FXCollections>
+                                 </items>
+                              </ComboBox>
+                              <Label layoutX="14.0" layoutY="62.0" prefHeight="25.0" prefWidth="113.0" text="Last Payment" />
+                              <DatePicker fx:id="lastPay" layoutX="127.0" layoutY="63.0" prefHeight="24.0" prefWidth="125.0" />
+                              <Label layoutX="265.0" layoutY="14.0" prefHeight="25.0" prefWidth="105.0" text="Resigning Date" />
+                              <DatePicker fx:id="dor" layoutX="364.0" layoutY="16.0" prefHeight="24.0" prefWidth="113.0" />
+                           </children>
+                        </Pane>
+                        <Label layoutX="14.0" layoutY="254.0" prefHeight="17.0" prefWidth="171.0" text="Employment Details" />
+                     </children>
+                  </Pane>
+               </children>
+            </Pane>
+            <Button fx:id="save" layoutX="493.0" layoutY="444.0" mnemonicParsing="false" onAction="#saveAll" prefHeight="32.0" prefWidth="113.0" text="Save &amp; Next" />
+            <Button layoutX="614.0" layoutY="444.0" mnemonicParsing="false" onAction="#handleCancel" prefHeight="32.0" prefWidth="83.0" text="Cancel" />
+            <Button fx:id="edit" layoutX="401.0" layoutY="444.0" mnemonicParsing="false" onAction="#edit" prefHeight="32.0" prefWidth="83.0" text="Edit" />
+         </children>
+      </Pane>
+      <Pane id="top_section1" layoutY="3.0" prefHeight="24.0" prefWidth="740.0">
+         <children>
+            <Label id="title" layoutX="8.0" text="Employee" />
+            <Label id="close-btn" fx:id="close_btn" layoutX="679.0" layoutY="-6.0" onMouseClicked="#handleClose" onMouseEntered="#rotate" prefHeight="42.0" prefWidth="46.0" />
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>

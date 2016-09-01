@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE hibernate-mapping SYSTEM "hibernate-mapping-3.0.dtd" >
+
+<hibernate-mapping>
+<class name="com.aviara.bean.Company_Info" table="company_info">
+      <id name="company_id" column="company_id" type="integer"> 
+          <generator class="increment"></generator> 
+      </id> 
+        <property name="company_name" column="company_name" type="string"></property> 
+        <!--<property name="reg_no" column="reg_no" type="string"></property> -->  
+        <property name="pan_no" column="pan_no" type="string"></property> 
+        <property name="esi_no" column="esi_no" type="string"></property> 
+        <property name="pf_no" column="pf_no" type="string"></property>   
+        <property name="address1" column="address1" type="string"></property>
+        <property name="address2" column="address2" type="string"></property>
+        <property name="city" column="city" type="string"></property>
+        <property name="state" column="state" type="string"></property>
+        <property name="zipcode" column="zipcode" type="integer"></property>
+        <property name="country" column="country" type="string"></property>
+        <property name="contact_no1" column="contact1" type="integer"></property>
+        <property name="contact_no2" column="contact2" type="integer"></property>
+        <property name="email" column="email" type="string"></property>
+        <property name="fmonth" column="fmonth" type="integer"></property>
+        <property name="tmonth" column="tmonth" type="integer"></property>
+        <property name="fyear" column="fyear" type="integer"></property>
+        <property name="tyear" column="tyear" type="integer"></property>
+        <properties name="uk1" unique="true">
+            <property name="reg_no" column="reg_no" type="string" />  
+        </properties> 
+    </class>
+</hibernate-mapping>

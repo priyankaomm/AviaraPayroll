@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane fx:id="view_dept" prefHeight="334.0" prefWidth="474.0" stylesheets="@../aviara/style/style.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.aviara.controller.View_DepartmentController">
+   <children>
+      <Pane id="top_section1" prefHeight="32.0" prefWidth="474.0">
+         <children>
+            <Label id="title" layoutX="-1.0" layoutY="5.0" text="Department">
+               <font>
+                  <Font size="17.0" />
+               </font>
+            </Label>
+            <Label id="close-btn" fx:id="close_btn" layoutX="383.0" layoutY="-4.0" onMouseClicked="#close_window" onMouseEntered="#rotate" prefHeight="40.0" prefWidth="50.0" />
+         </children>
+      </Pane>
+      <Pane id="top1" layoutY="32.0" prefHeight="15.0" prefWidth="474.0" />
+      <TableView id="table" fx:id="dept_table" layoutX="29.0" layoutY="89.0" prefHeight="230.0" prefWidth="412.0">
+        <columns>
+          <TableColumn fx:id="col1" prefWidth="175.0" text="Department Name " />
+          <TableColumn fx:id="col2" prefWidth="122.0" text="Overtime Status" />
+            <TableColumn fx:id="col3" prefWidth="117.0" text="Rate(OT/Hr)" />
+        </columns>
+      </TableView>
+      <Pane layoutY="47.0" prefHeight="42.0" prefWidth="474.0">
+         <children>
+            <Pane id="add_emp_panel" layoutX="18.0" layoutY="1.0" prefHeight="42.0" prefWidth="78.0">
+               <children>
+                  <Label id="add_emp" layoutX="1.0" layoutY="1.0" onMouseClicked="#openAddDepartment" prefHeight="38.0" prefWidth="78.0" text="Add" />
+               </children>
+            </Pane>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>

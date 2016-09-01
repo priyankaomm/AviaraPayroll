@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE hibernate-mapping SYSTEM "hibernate-mapping-3.0.dtd" >
+  
+<hibernate-mapping>
+<class name="com.aviara.bean.Bank" table="emp_bank">
+      <id name="id" column="id" type="integer"> 
+          <generator class="increment"></generator> 
+      </id> 
+        <property name="bank_name" column="bank_name" type="string"></property> 
+        <property name="acc_no" column="acc_no" type="string"></property>   
+        <property name="ifsc_code" column="ifsc_code" type="string"></property> 
+        <property name="pf_no" column="pf_no" type="string"></property> 
+        <property name="pan_no" column="pan_no" type="string"></property> 
+        <property name="voter_id" column="voter_id" type="string"></property> 
+        <property name="adhar_no" column="adhar_no" type="string"></property>
+        <property name="emp_id" column="emp_id" type="string"></property>  
+        
+    </class>
+  
+</hibernate-mapping>

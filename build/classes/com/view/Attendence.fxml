@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+
+<AnchorPane id="AnchorPane" prefHeight="426.0" prefWidth="425.0" stylesheets="@../aviara/style/style.css" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8" fx:controller="com.view.AttendenceController">
+   <children>
+      <Pane id="top1" layoutY="30.0" prefHeight="15.0" prefWidth="457.0" />
+      <Pane id="top_section1" layoutY="-2.0" prefHeight="32.0" prefWidth="457.0">
+         <children>
+            <Label id="title" layoutX="9.0" text="Attendence" />
+            <Label id="close-btn" fx:id="close_btn" layoutX="417.0" layoutY="-7.0" prefHeight="42.0" prefWidth="45.0" />
+            <ComboBox fx:id="e_id" layoutX="278.0" layoutY="6.0" prefHeight="25.0" prefWidth="40.0" />
+            <ComboBox fx:id="e_id1" layoutX="334.0" layoutY="6.0" prefHeight="25.0" prefWidth="40.0" />
+         </children>
+      </Pane>
+      <Pane layoutY="45.0" prefHeight="438.0" prefWidth="457.0">
+         <children>
+            <Pane id="info_panel" layoutX="10.0" layoutY="34.0" prefHeight="401.0" prefWidth="444.0">
+               <children>
+                  <ScrollPane id="scroll_pane" fx:id="scroll" layoutX="13.0" layoutY="15.0" prefHeight="321.0" prefWidth="421.0" />
+                  <Button fx:id="save_btn" layoutX="236.0" layoutY="350.0" mnemonicParsing="false" onAction="#saveLeaveDetails" text="Save" />
+                  <Button layoutX="359.0" layoutY="350.0" mnemonicParsing="false" text="Cancel" />
+                  <Button fx:id="edit_btn" layoutX="300.0" layoutY="350.0" mnemonicParsing="false" text="Edit" />
+               </children>
+            </Pane>
+            <Label id="tdate" layoutX="14.0" layoutY="2.0" prefHeight="29.0" prefWidth="203.0" text="Employee List" />
+            <Label id="tdate" fx:id="tdate" layoutX="339.0" prefHeight="25.0" prefWidth="104.0">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>

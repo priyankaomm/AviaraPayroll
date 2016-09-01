@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE hibernate-mapping SYSTEM "hibernate-mapping-3.0.dtd" >
+
+<hibernate-mapping>
+   <class name="com.aviara.bean.EmpLeaveTaken" table="empLeaveTaken">
+      <id name="id" column="id" type="integer"> 
+          <generator class="increment"></generator> 
+      </id> 
+        <property name="emp_id" column="emp_id" type="string"></property> 
+        <property name="leave_id" column="leave_id" type="integer"></property>   
+        <property name="fromDate" column="fromDate" type="date"></property> 
+        <property name="toDate" column="toDate" type="date"></property>   
+        <property name="totalDays" column="totalDays" type="integer"></property> 
+        <property name="status" column="status" type="integer"></property>   
+        <property name="approvedByLead" column="approvedByLead" type="string"></property> 
+        <property name="approvedBy" column="approvedBy" type="string"></property> 
+        <property name="remarks" column="remarks" type="string"></property>  
+   </class>
+  
+
+</hibernate-mapping>

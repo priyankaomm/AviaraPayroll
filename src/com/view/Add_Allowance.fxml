@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane fx:id="add_allow" prefHeight="297.0" prefWidth="456.0" stylesheets="@../aviara/style/style.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.aviara.controller.Add_AllowanceController">
+   <children>
+      <Pane layoutY="-1.0" prefHeight="318.0" prefWidth="456.0">
+         <children>
+            <Pane id="top_section1" prefHeight="55.0" prefWidth="455.0">
+               <children>
+                  <Label id="title" layoutY="6.0" text="Add Allowance">
+                     <font>
+                        <Font size="17.0" />
+                     </font>
+                  </Label>
+                  <Label id="close-btn" fx:id="close_btn" layoutX="410.0" layoutY="-5.0" onMouseClicked="#close_window" onMouseEntered="#rotate" prefHeight="25.0" prefWidth="52.0" />
+               </children>
+            </Pane>
+            <Pane id="top1" layoutY="32.0" prefHeight="15.0" prefWidth="456.0" />
+            <Label layoutX="88.0" layoutY="104.0" text="Allowance Name" textFill="WHITE" />
+            <Label layoutX="88.0" layoutY="155.0" text="Allowance  type" textFill="WHITE" />
+            <TextField fx:id="a_name" layoutX="206.0" layoutY="103.0" prefHeight="30.0" prefWidth="150.0" />
+            <TextField fx:id="a_type" layoutX="206.0" layoutY="152.0" prefHeight="30.0" prefWidth="150.0" />
+            <Label layoutX="88.0" layoutY="205.0" text="Value" textFill="WHITE" />
+            <TextField fx:id="a_value" layoutX="206.0" layoutY="203.0" prefHeight="30.0" prefWidth="150.0" />
+            <Button layoutX="246.0" layoutY="255.0" mnemonicParsing="false" onAction="#addAllowanceInfo" prefHeight="32.0" prefWidth="66.0" text="Save" textFill="WHITE" />
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>

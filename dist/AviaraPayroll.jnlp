@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<jnlp spec="1.0" xmlns:jfx="http://javafx.com" href="AviaraPayroll.jnlp">
+  <information>
+    <title>AviaraPayroll</title>
+    <vendor>comp2</vendor>
+    <description>null</description>
+    <offline-allowed/>
+  </information>
+  <resources>
+    <j2se version="1.6+" href="http://java.sun.com/products/autodl/j2se"/>
+    <jar href="AviaraPayroll.jar" size="3156410" download="eager" />
+    <jar href="lib\activation.jar" size="55147" download="eager" />
+    <jar href="lib\antlr-2.7.6.jar" size="443432" download="eager" />
+    <jar href="lib\asm-attrs.jar" size="16777" download="eager" />
+    <jar href="lib\asm.jar" size="26360" download="eager" />
+    <jar href="lib\c3p0-0.9.1.jar" size="608376" download="eager" />
+    <jar href="lib\cglib-2.1.3.jar" size="282338" download="eager" />
+    <jar href="lib\common-lang3.jar" size="646680" download="eager" />
+    <jar href="lib\commons-beanutils-1.8.3.jar" size="232019" download="eager" />
+    <jar href="lib\commons-codec-1.9.jar" size="263965" download="eager" />
+    <jar href="lib\commons-collections-2.1.1.jar" size="175426" download="eager" />
+    <jar href="lib\commons-digester-2.1.jar" size="196768" download="eager" />
+    <jar href="lib\commons-javaflow-20060411.jar" size="96529" download="eager" />
+    <jar href="lib\commons-lang-2.6.jar" size="284220" download="eager" />
+    <jar href="lib\commons-logging-1.1.3.jar" size="62050" download="eager" />
+    <jar href="lib\commons-logging-api-1.1.1.jar" size="52313" download="eager" />
+    <jar href="lib\commons.collections-3.2.1.jar" size="582765" download="eager" />
+    <jar href="lib\dom4j-1.6.1.jar" size="313898" download="eager" />
+    <jar href="lib\dynamicreports-core-3.1.6.jar" size="1207388" download="eager" />
+    <jar href="lib\ehcache-1.2.3.jar" size="208048" download="eager" />
+    <jar href="lib\ejb3-persistence.jar" size="50626" download="eager" />
+    <jar href="lib\groovy-all-1.7.5.jar" size="5482221" download="eager" />
+    <jar href="lib\hibernate-annotations.jar" size="363736" download="eager" />
+    <jar href="lib\hibernate-commons-annotations.jar" size="66426" download="eager" />
+    <jar href="lib\hibernate-validator.jar" size="60992" download="eager" />
+    <jar href="lib\hibernate3.jar" size="2204714" download="eager" />
+    <jar href="lib\hsqldb-2.3.1.jar" size="1467326" download="eager" />
+    <jar href="lib\itext-2.1.7.jar" size="1130070" download="eager" />
+    <jar href="lib\jackcess-2.1.3.jar" size="817491" download="eager" />
+    <jar href="lib\jasperreports-4.5.1.jar" size="3445366" download="eager" />
+    <jar href="lib\jasperreports-5.1.2.jar" size="4533699" download="eager" />
+    <jar href="lib\jcommon-1.0.8.jar" size="310890" download="eager" />
+    <jar href="lib\jdbc2_0-stdext.jar" size="6727" download="eager" />
+    <jar href="lib\jta.jar" size="8812" download="eager" />
+    <jar href="lib\log4j-1.2.11.jar" size="350627" download="eager" />
+    <jar href="lib\mail.jar" size="462098" download="eager" />
+    <jar href="lib\mysql-connector-java-5.1.7-bin.jar" size="709922" download="eager" />
+    <jar href="lib\rs2xml.jar" size="171578" download="eager" />
+    <jar href="lib\ucanaccess-3.0.6.jar" size="339810" download="eager" />
+    <jar href="lib\xerces-2.6.2.jar" size="1010806" download="eager" />
+  </resources>
+  <applet-desc  width="800" height="600" main-class="com.javafx.main.NoJavaFXFallback"  name="AviaraPayroll" >
+    <param name="requiredFXVersion" value="8.0+"/>
+  </applet-desc>
+  <jfx:javafx-desc  width="800" height="600" main-class="aviarapayroll.AviaraPayroll"  name="AviaraPayroll" />
+  <update check="always"/>
+</jnlp>

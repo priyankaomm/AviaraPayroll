@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE hibernate-mapping SYSTEM "hibernate-mapping-3.0.dtd" >
+  
+<hibernate-mapping>
+<class name="com.aviara.bean.Holiday" table="holidays">
+      <id name="id" column="id" type="integer"> 
+          <generator class="increment"></generator> 
+      </id> 
+        <property name="date" column="date" type="date"></property> 
+        <property name="event" column="event" type="string"></property>   
+        <property name="compony_id" column="compony_id" type="integer"></property> 
+        <property name="branch_id" column="branch_id" type="integer"></property> 
+       
+    </class>
+  
+</hibernate-mapping>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE hibernate-mapping SYSTEM "hibernate-mapping-3.0.dtd" >
+
+<hibernate-mapping>
+
+  <class name="com.aviara.bean.Allowance" table="allowance_info">
+      <id name="allowance_id" column="allowance_id" type="integer"> 
+          <generator class="increment"></generator> 
+      </id> 
+        <property name="allow_name" column="allow_name" type="string"></property> 
+        <property name="allow_type" column="allow_type" type="string"></property>
+        <property name="value" column="value" type="double"></property>
+      </class>
+
+</hibernate-mapping>

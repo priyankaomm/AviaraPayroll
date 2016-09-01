@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" fx:id="employee" prefHeight="538.0" prefWidth="751.0" stylesheets="@../aviara/style/style.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.aviara.controller.EmpSalaryController">
+   <children>
+      <Pane layoutX="1.0" layoutY="-1.0" prefHeight="496.0" prefWidth="750.0">
+         <children>
+            <Pane id="top1" layoutY="32.0" minHeight="7.0" prefHeight="7.0" prefWidth="750.0" />
+            <Pane id="info_panel" layoutX="2.0" layoutY="45.0" prefHeight="55.0" prefWidth="750.0">
+               <children>
+                  <Label layoutX="14.0" layoutY="15.0" prefHeight="21.0" prefWidth="95.0" text="Employee Id:" />
+                  <Label layoutX="196.0" layoutY="15.0" prefHeight="25.0" prefWidth="66.0" text="Name:" />
+                  <Label layoutX="539.0" layoutY="15.0" prefHeight="25.0" prefWidth="52.0" text="Date" />
+                  <DatePicker fx:id="doj" layoutX="591.0" layoutY="16.0" prefHeight="25.0" prefWidth="115.0" />
+                  <Label fx:id="emp_id" layoutX="116.0" layoutY="15.0" prefHeight="25.0" prefWidth="66.0" />
+                  <Label fx:id="name" layoutX="255.0" layoutY="15.0" prefHeight="25.0" prefWidth="200.0" />
+               </children>
+            </Pane>
+            <Pane id="info_panel" layoutX="5.0" layoutY="101.0" prefHeight="387.0" prefWidth="742.0">
+               <children>
+                  <Pane id="info_panel" layoutX="14.0" layoutY="7.0" prefHeight="247.0" prefWidth="243.0">
+                     <children>
+                        <Label layoutX="14.0" layoutY="14.0" prefHeight="25.0" prefWidth="95.0" text="Basic Salary: " />
+                        <Label layoutX="9.0" layoutY="53.0" prefHeight="25.0" prefWidth="88.0" text="Allowances:" />
+                        <Label layoutX="9.0" layoutY="99.0" prefHeight="25.0" prefWidth="125.0" text="Salary Increment :" />
+                        <TextField fx:id="inc" layoutX="129.0" layoutY="101.0" onKeyReleased="#handleCalculate" prefHeight="21.0" prefWidth="72.0" />
+                        <Label layoutX="11.0" layoutY="144.0" prefHeight="25.0" prefWidth="101.0" text="Bonus:" />
+                        <TextField fx:id="bonus" layoutX="129.0" layoutY="144.0" onKeyReleased="#handleCalculate" prefHeight="21.0" prefWidth="72.0" />
+                        <Label layoutX="14.0" layoutY="185.0" prefHeight="25.0" prefWidth="115.0" text="Reimbursement:" />
+                        <TextField fx:id="reim" layoutX="128.0" layoutY="187.0" onKeyReleased="#handleCalculate" prefHeight="21.0" prefWidth="72.0" />
+                        <Label fx:id="basic_sal" layoutX="122.0" layoutY="14.0" prefHeight="25.0" prefWidth="72.0" />
+                        <Label fx:id="basic_sal1" layoutX="197.0" layoutY="14.0" prefHeight="25.0" prefWidth="37.0" text="Rs" />
+                        <Label fx:id="allwnce" layoutX="122.0" layoutY="53.0" prefHeight="25.0" prefWidth="72.0" />
+                        <Label fx:id="basic_sal11" layoutX="197.0" layoutY="53.0" prefHeight="25.0" prefWidth="37.0" text="Rs" />
+                        <Label fx:id="basic_sal111" layoutX="197.0" layoutY="99.0" prefHeight="25.0" prefWidth="37.0" text="Rs" />
+                        <Label fx:id="basic_sal1111" layoutX="199.0" layoutY="144.0" prefHeight="25.0" prefWidth="37.0" text="Rs" />
+                        <Label fx:id="basic_sal11111" layoutX="199.0" layoutY="185.0" prefHeight="25.0" prefWidth="37.0" text="Rs" />
+                     </children>
+                  </Pane>
+                  <Pane id="info_panel" layoutX="259.0" layoutY="7.0" prefHeight="247.0" prefWidth="243.0">
+                     <children>
+                        <Label layoutX="14.0" layoutY="14.0" prefHeight="25.0" prefWidth="140.0" text="Total Working Days: " />
+                        <Label layoutX="14.0" layoutY="52.0" prefHeight="25.0" prefWidth="108.0" text="Total Leave: " />
+                        <Label layoutX="16.0" layoutY="161.0" prefHeight="25.0" prefWidth="133.0" text="Net Payable days:" />
+                        <Label layoutX="13.0" layoutY="208.0" prefHeight="25.0" prefWidth="125.0" text="Total Basic Salary:" />
+                        <Label layoutX="14.0" layoutY="89.0" prefHeight="25.0" prefWidth="140.0" text="Total Paid Leaves" />
+                        <Label layoutX="15.0" layoutY="124.0" prefHeight="25.0" prefWidth="140.0" text="Unpaid Leaves" />
+                        <Label fx:id="twork" layoutX="150.0" layoutY="14.0" prefHeight="25.0" prefWidth="52.0" />
+                        <Label fx:id="uleave" layoutX="150.0" layoutY="52.0" prefHeight="25.0" prefWidth="52.0" />
+                        <Label fx:id="paid" layoutX="150.0" layoutY="89.0" prefHeight="25.0" prefWidth="52.0" />
+                        <Label fx:id="unpaid" layoutX="150.0" layoutY="124.0" prefHeight="25.0" prefWidth="52.0" />
+                        <Label fx:id="pdays" layoutX="150.0" layoutY="161.0" prefHeight="25.0" prefWidth="52.0" />
+                        <Label fx:id="total1" layoutX="150.0" layoutY="208.0" prefHeight="25.0" prefWidth="66.0" />
+                        <Label fx:id="pdays1" layoutX="204.0" layoutY="208.0" prefHeight="25.0" prefWidth="37.0" text="Rs" />
+                     </children>
+                  </Pane>
+                  <Pane id="info_panel" layoutX="502.0" layoutY="7.0" prefHeight="247.0" prefWidth="231.0">
+                     <children>
+                        <Label layoutX="14.0" layoutY="14.0" prefHeight="25.0" prefWidth="95.0" text="Deduction's: " />
+                        <Label layoutX="14.0" layoutY="173.0" prefHeight="25.0" prefWidth="115.0" text="Total Deduction:" />
+                        <ScrollPane id="scroll_pane" fx:id="dscroll" layoutX="16.0" layoutY="39.0" prefHeight="132.0" prefWidth="200.0" />
+                        <Label fx:id="tdeduct" layoutX="129.0" layoutY="173.0" prefHeight="25.0" prefWidth="66.0" />
+                        <Label layoutX="198.0" layoutY="173.0" prefHeight="25.0" prefWidth="37.0" text="Rs" />
+                        <Label layoutX="16.0" layoutY="208.0" prefHeight="25.0" prefWidth="95.0" text="Other" />
+                        <TextField fx:id="other" layoutX="127.0" layoutY="209.0" onKeyReleased="#handleCalculate" prefHeight="21.0" prefWidth="66.0" />
+                        <Label layoutX="198.0" layoutY="207.0" prefHeight="25.0" prefWidth="37.0" text="Rs" />
+                     </children>
+                  </Pane>
+                  <Pane id="info_panel" layoutX="18.0" layoutY="257.0" prefHeight="119.0" prefWidth="714.0">
+                     <children>
+                        <Label layoutX="14.0" layoutY="17.0" prefHeight="25.0" prefWidth="95.0" text="Total Salary: " />
+                        <Label layoutX="317.0" layoutY="17.0" prefHeight="25.0" prefWidth="81.0" text="For Month" />
+                        <ComboBox fx:id="month" layoutX="409.0" layoutY="17.0" onAction="#check" prefHeight="25.0" prefWidth="81.0" />
+                        <ComboBox fx:id="year" layoutX="498.0" layoutY="17.0" onAction="#check" prefHeight="25.0" prefWidth="72.0" />
+                        <Button fx:id="save" layoutX="441.0" layoutY="71.0" mnemonicParsing="false" onAction="#save" prefHeight="25.0" prefWidth="113.0" text="Save &amp; Close" />
+                        <Button layoutX="581.0" layoutY="71.0" mnemonicParsing="false" prefHeight="22.0" prefWidth="95.0" text="Cancel" />
+                        <Button fx:id="print" layoutX="328.0" layoutY="71.0" mnemonicParsing="false" onAction="#print" prefHeight="22.0" prefWidth="95.0" text="Print" />
+                        <Label fx:id="total_sal" layoutX="121.0" layoutY="17.0" prefHeight="25.0" prefWidth="81.0" />
+                        <Label fx:id="pdays11" layoutX="202.0" layoutY="17.0" prefHeight="25.0" prefWidth="37.0" text="Rs" />
+                        <Label id="title" fx:id="grand" layoutX="121.0" layoutY="47.0" prefHeight="25.0" prefWidth="81.0" />
+                        <Label id="title" fx:id="pdays111" layoutX="202.0" layoutY="47.0" prefHeight="30.0" prefWidth="45.0" text="Rs" />
+                        <Label id="title" fx:id="pdays1111" layoutX="14.0" layoutY="46.0" prefHeight="30.0" prefWidth="95.0" text="Total" />
+                     </children>
+                  </Pane>
+               </children>
+            </Pane>
+         </children>
+      </Pane>
+      <Pane id="top_section1" layoutY="-2.0" maxHeight="47.0" prefHeight="47.0" prefWidth="750.0">
+         <children>
+            <Label id="title" layoutY="-2.0" prefHeight="32.0" prefWidth="140.0" text="Salary Details" />
+            <Label id="close-btn" fx:id="close_btn" layoutX="698.0" layoutY="-5.0" onMouseClicked="#handleClose" onMouseEntered="#rotate" prefHeight="42.0" prefWidth="46.0" />
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>

@@ -1,0 +1,342 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.collections.*?>
+
+<AnchorPane fx:id="employee" prefHeight="477.0" prefWidth="610.0" stylesheets="@../aviara/style/style.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.aviara.controller.AddEmployeeController">
+   <children>
+      <Pane prefHeight="513.0" prefWidth="610.0">
+         <children>
+            <Pane id="top_section1" layoutY="-3.0" maxHeight="32.0" prefHeight="35.0" prefWidth="610.0">
+               <children>
+                  <Label id="close-btn" fx:id="close_btn" layoutX="568.0" layoutY="-4.0" onMouseClicked="#close_window" onMouseEntered="#rotate" prefHeight="42.0" prefWidth="46.0" />
+               </children></Pane>
+            <Pane fx:id="emp_main" layoutX="4.0" layoutY="35.0" prefHeight="464.0" prefWidth="603.0">
+               <children>
+                  <TabPane prefHeight="464.0" prefWidth="603.0" tabClosingPolicy="UNAVAILABLE">
+                    <tabs>
+                      <Tab text="Personal Setting">
+                           <content>
+                              <Pane prefHeight="384.0" prefWidth="603.0">
+                                 <children>
+                                    <Pane fx:id="personal_pane" layoutX="3.0" layoutY="34.0" prefHeight="399.0" prefWidth="598.0">
+                                       <children>
+                                          <TextField fx:id="fname" layoutX="54.0" layoutY="40.0" prefHeight="25.0" prefWidth="158.0" />
+                                          <TextField fx:id="mname" layoutX="249.0" layoutY="40.0" prefHeight="25.0" prefWidth="174.0" />
+                                          <TextField fx:id="lname" layoutX="433.0" layoutY="40.0" prefHeight="25.0" prefWidth="151.0" />
+                                          <Label layoutX="47.0" layoutY="6.0" prefHeight="17.0" prefWidth="171.0" text="First Name" />
+                                          <Label layoutX="250.0" layoutY="6.0" prefHeight="17.0" prefWidth="171.0" text="Middle Name" />
+                                          <Label layoutX="434.0" layoutY="6.0" prefHeight="17.0" prefWidth="149.0" text="Last Name" />
+                                          <Label layoutX="51.0" layoutY="314.0" prefHeight="25.0" prefWidth="88.0" text="Designation" />
+                                          <TextField fx:id="designation" layoutX="183.0" layoutY="313.0" prefHeight="25.0" prefWidth="201.0" />
+                                          <Label layoutX="47.0" layoutY="164.0" prefHeight="25.0" prefWidth="113.0" text="Date Of Joining" />
+                                          <DatePicker fx:id="doj" layoutX="184.0" layoutY="166.0" prefHeight="24.0" prefWidth="125.0" />
+                                          <Label layoutX="321.0" layoutY="164.0" prefHeight="25.0" prefWidth="69.0" text="Gender" />
+                                          <RadioButton fx:id="male" layoutX="385.0" layoutY="163.0" mnemonicParsing="false" text="Male" />
+                                          <RadioButton fx:id="female" layoutX="467.0" layoutY="163.0" mnemonicParsing="false" text="Female" />
+                                          <Label layoutX="51.0" layoutY="217.0" prefHeight="25.0" prefWidth="105.0" text="Branch" />
+                                          <ComboBox fx:id="branch" layoutX="184.0" layoutY="215.0" prefHeight="25.0" prefWidth="203.0">
+                                          <items>
+                                               <FXCollections fx:factory="observableArrayList">
+                                                  <String fx:value="Wakdewadi" />
+                                                  <String fx:value="Hadapsar" />
+                                                  <String fx:value="Hinjewadi" />
+                                               </FXCollections>
+                                            </items>
+                                          </ComboBox>
+                                          <Label layoutX="51.0" layoutY="268.0" prefHeight="25.0" prefWidth="105.0" text="Department" />
+                                          <ComboBox fx:id="dept" layoutX="184.0" layoutY="268.0" prefHeight="25.0" prefWidth="203.0">
+                                          <items>
+                                               <FXCollections fx:factory="observableArrayList">
+                                                  <String fx:value="IT" />
+                                                  <String fx:value="HR" />
+                                                  <String fx:value="Admin" />
+                                               </FXCollections>
+                                            </items>
+                                          </ComboBox>
+                                          <Label layoutX="47.0" layoutY="119.0" prefHeight="25.0" prefWidth="113.0" text="Date Of Birth" />
+                                          <DatePicker fx:id="dob" layoutX="183.0" layoutY="119.0" prefHeight="24.0" prefWidth="125.0" />
+                                          <Label layoutX="47.0" layoutY="75.0" prefHeight="25.0" prefWidth="113.0" text="Employee Id" />
+                                          <TextField fx:id="emp_id" layoutX="184.0" layoutY="74.0" onAction="#setEmpid" prefHeight="25.0" prefWidth="123.0" />
+                                       </children>
+                                    </Pane>
+                                    <Label id="title" layoutX="14.0" layoutY="4.0" text="Primary Information" />
+                                 </children>
+                              </Pane>
+                           </content>
+                        </Tab>
+                      <Tab text="Contact Setting">
+                           <content>
+                              <Pane prefHeight="396.0" prefWidth="603.0">
+                                 <children>
+                                    <Pane layoutY="6.0" prefHeight="382.0" prefWidth="603.0">
+                                       <children>
+                                          <Label layoutX="39.0" layoutY="44.0" text="Contact No" />
+                                          <TextField fx:id="contact" layoutX="180.0" layoutY="46.0" prefHeight="21.0" prefWidth="150.0" />
+                                          <Label layoutX="355.0" layoutY="44.0" text="Alt Contact " />
+                                          <TextField fx:id="alt_contact" layoutX="459.0" layoutY="46.0" prefHeight="21.0" prefWidth="135.0" />
+                                          <Label layoutX="38.0" layoutY="85.0" prefHeight="25.0" prefWidth="83.0" text="Email Id" />
+                                          <TextField fx:id="email" layoutX="179.0" layoutY="87.0" prefHeight="21.0" prefWidth="321.0" />
+                                          <Label layoutX="37.0" layoutY="258.0" text="Name" />
+                                          <Label id="title" layoutX="26.0" layoutY="6.0" text="Contact Details" />
+                                          <Label layoutX="37.0" layoutY="131.0" prefHeight="25.0" prefWidth="108.0" text="Guardian Name" />
+                                          <TextField fx:id="g_name" layoutX="180.0" layoutY="133.0" prefHeight="21.0" prefWidth="145.0" />
+                                          <Label layoutX="357.0" layoutY="131.0" text="Contact No" />
+                                          <TextField fx:id="g_contact" layoutX="450.0" layoutY="133.0" prefHeight="21.0" prefWidth="135.0" />
+                                          <Label layoutX="39.0" layoutY="177.0" prefHeight="25.0" prefWidth="108.0" text="Mother's Name" />
+                                          <TextField fx:id="m_name" layoutX="180.0" layoutY="179.0" prefHeight="21.0" prefWidth="145.0" />
+                                          <TextField fx:id="m_contact" layoutX="450.0" layoutY="179.0" prefHeight="21.0" prefWidth="135.0" />
+                                          <Label layoutX="357.0" layoutY="177.0" text="Contact No" />
+                                          <Label id="title" layoutX="29.0" layoutY="215.0" text="Emergency Contact 1" />
+                                          <TextField fx:id="e1_name" layoutX="106.0" layoutY="260.0" prefHeight="21.0" prefWidth="145.0" />
+                                          <Label layoutX="299.0" layoutY="258.0" text="Contact No" />
+                                          <TextField fx:id="e1_contact" layoutX="387.0" layoutY="260.0" prefHeight="21.0" prefWidth="145.0" />
+                                          <Label id="title" layoutX="25.0" layoutY="300.0" text="Emergency Contact 2" />
+                                          <Label layoutX="44.0" layoutY="339.0" text="Name" />
+                                          <TextField fx:id="e2_name" layoutX="106.0" layoutY="341.0" prefHeight="21.0" prefWidth="145.0" />
+                                          <Label layoutX="306.0" layoutY="329.0" text="Contact No" />
+                                          <TextField fx:id="e2_contact" layoutX="398.0" layoutY="331.0" prefHeight="21.0" prefWidth="145.0" />
+                                       </children>
+                                    </Pane>
+                                 </children>
+                              </Pane>
+                           </content>
+                        </Tab>
+                        <Tab text="Address">
+                           <content>
+                              <Pane prefHeight="444.0" prefWidth="603.0">
+                                 <children>
+                                    <Pane layoutX="3.0" layoutY="7.0" prefHeight="419.0" prefWidth="588.0">
+                                       <children>
+                                          <Label id="title" layoutX="12.0" layoutY="6.0" text="Permanent Address" />
+                                          <Label layoutX="49.0" layoutY="93.0" text="State" />
+                                          <ComboBox fx:id="state1" layoutX="143.0" layoutY="93.0" prefHeight="25.0" prefWidth="198.0">
+                                            <items>
+                                               <FXCollections fx:factory="observableArrayList">
+                                                  <String fx:value="Andhra Pradesh" />
+                                                  <String fx:value="Arunachal Pradesh" />
+                                                  <String fx:value="Assam" />
+                                                  <String fx:value="Bihar" />
+                                                  <String fx:value="Chhattisgarh" />
+                                                  <String fx:value="Goa" />
+                                                  <String fx:value="Gujarat" />
+                                                  <String fx:value="Haryana" />
+                                                  <String fx:value="Himachal Pradesh" />
+                                                  <String fx:value="Jammu and Kashmir" />
+                                                  <String fx:value="Jharkhand" />
+                                                  <String fx:value="Karnataka" />
+                                                  <String fx:value="Kerala" />
+                                                  <String fx:value="Madhya Pradesh" />
+                                                  <String fx:value="Maharashtra" />
+                                                  <String fx:value="Manipur" />
+                                                  <String fx:value="Meghalaya" />
+                                                  <String fx:value="Mizoram" />
+                                                  <String fx:value="Nagaland" />
+                                                  <String fx:value="Odisha (Orissa)" />
+                                                  <String fx:value="Punjab" />
+                                                  <String fx:value="Rajasthan" />
+                                                  <String fx:value="Sikkim" />
+                                                  <String fx:value="Tamil Nadu" />
+                                                  <String fx:value="Telangana " />
+                                                  <String fx:value="Tripura" />
+                                                  <String fx:value="Uttar Pradesh" />
+                                                  <String fx:value="Uttarakhand" />
+                                                  <String fx:value="West Bengal" />
+                                                  
+
+
+                                               </FXCollections>
+                                            </items>
+                                          </ComboBox>
+                                          <Label layoutX="361.0" layoutY="93.0" text="City" />
+                                          <TextField fx:id="city1" layoutX="421.0" layoutY="95.0" prefHeight="21.0" prefWidth="148.0" />
+                                          <Label layoutX="49.0" layoutY="136.0" text="Address" />
+                                          <Label layoutX="361.0" layoutY="136.0" text="Pincode" />
+                                          <TextField fx:id="pincode1" layoutX="425.0" layoutY="138.0" />
+                                          <Label id="title" layoutX="14.0" layoutY="200.0" text="Present Address" />
+                                          <Label layoutX="49.0" layoutY="279.0" text="State" />
+                                          <ComboBox fx:id="state2" layoutX="128.0" layoutY="279.0" prefHeight="25.0" prefWidth="198.0">
+                                          <items>
+                                               <FXCollections fx:factory="observableArrayList">
+                                                  <String fx:value="Andhra Pradesh" />
+                                                  <String fx:value="Arunachal Pradesh" />
+                                                  <String fx:value="Assam" />
+                                                  <String fx:value="Bihar" />
+                                                  <String fx:value="Chhattisgarh" />
+                                                  <String fx:value="Goa" />
+                                                  <String fx:value="Gujarat" />
+                                                  <String fx:value="Haryana" />
+                                                  <String fx:value="Himachal Pradesh" />
+                                                  <String fx:value="Jammu and Kashmir" />
+                                                  <String fx:value="Jharkhand" />
+                                                  <String fx:value="Karnataka" />
+                                                  <String fx:value="Kerala" />
+                                                  <String fx:value="Madhya Pradesh" />
+                                                  <String fx:value="Maharashtra" />
+                                                  <String fx:value="Manipur" />
+                                                  <String fx:value="Meghalaya" />
+                                                  <String fx:value="Mizoram" />
+                                                  <String fx:value="Nagaland" />
+                                                  <String fx:value="Odisha (Orissa)" />
+                                                  <String fx:value="Punjab" />
+                                                  <String fx:value="Rajasthan" />
+                                                  <String fx:value="Sikkim" />
+                                                  <String fx:value="Tamil Nadu" />
+                                                  <String fx:value="Telangana " />
+                                                  <String fx:value="Tripura" />
+                                                  <String fx:value="Uttar Pradesh" />
+                                                  <String fx:value="Uttarakhand" />
+                                                  <String fx:value="West Bengal" />
+                                                  
+
+
+                                               </FXCollections>
+                                            </items>
+                                          </ComboBox>
+                                          <Label layoutX="361.0" layoutY="279.0" text="City" />
+                                          <TextField fx:id="city2" layoutX="425.0" layoutY="281.0" />
+                                          <Label layoutX="50.0" layoutY="326.0" text="Address" />
+                                          <Label layoutX="361.0" layoutY="326.0" text="Pincode" />
+                                          <TextField fx:id="pincode2" layoutX="425.0" layoutY="328.0" />
+                                          <Label layoutX="49.0" layoutY="45.0" text="Country" />
+                                          <ComboBox fx:id="country1" layoutX="143.0" layoutY="47.0" prefHeight="25.0" prefWidth="198.0">
+                                          <items>
+                                               <FXCollections fx:factory="observableArrayList">
+                                                  <String fx:value="India" />
+                                               </FXCollections>
+                                            </items>
+                                          </ComboBox>
+                                          <Label layoutX="50.0" layoutY="241.0" text="Country" />
+                                          <ComboBox fx:id="country2" layoutX="128.0" layoutY="241.0" prefHeight="25.0" prefWidth="198.0">
+                                             <items>
+                                               <FXCollections fx:factory="observableArrayList">
+                                                  <String fx:value="India" />
+                                               </FXCollections>
+                                            </items>
+                                          </ComboBox>
+                                          <CheckBox fx:id="same" layoutX="414.0" layoutY="207.0" mnemonicParsing="false" onAction="#handleCheckEvent" text="Same As Above" />
+                                          <TextField fx:id="address1" layoutX="143.0" layoutY="138.0" prefHeight="21.0" prefWidth="199.0" />
+                                          <TextField fx:id="address2" layoutX="128.0" layoutY="328.0" prefHeight="21.0" prefWidth="199.0" />
+                                          <Button layoutX="464.0" layoutY="373.0" mnemonicParsing="false" onAction="#saveAll" text="Save" />
+                                       </children>
+                                    </Pane>
+                                 </children></Pane>
+                           </content>
+                        </Tab>
+                        <Tab fx:id="quali" text="Qualification">
+                           <content>
+                              <Pane prefHeight="200.0" prefWidth="200.0">
+                                 <children>
+                                    <Pane layoutX="7.0" layoutY="6.0" prefHeight="424.0" prefWidth="587.0">
+                                       <children>
+                                          <Pane layoutX="1.0" layoutY="6.0" prefHeight="153.0" prefWidth="585.0">
+                                             <children>
+                                                <Label id="title" layoutX="6.0" layoutY="-1.0" text="Qualification" />
+                                                <Label layoutX="32.0" layoutY="33.0" text="Qualification" />
+                                                <ComboBox fx:id="degree" layoutX="133.0" layoutY="33.0" prefWidth="150.0">
+                                                   <items>
+                                                      <FXCollections fx:factory="observableArrayList">
+                                                         <String fx:value="BE/Btech" />
+                                                         <String fx:value="MCA" />
+                                                         <String fx:value="MCS" />
+                                                         <String fx:value="MBA" />
+                                                         <String fx:value="BCA" />
+                                                         <String fx:value="BCS" />
+                                                         <String fx:value="Diploma" />
+                                                         <String fx:value="BBA" />
+                                                         <String fx:value="HSC" />
+                                                         <String fx:value="SSC" />
+                                                      </FXCollections>
+                                                   </items>
+                                                </ComboBox>
+                                                <Label layoutX="301.0" layoutY="33.0" text="University" />
+                                                <TextField fx:id="university" layoutX="377.0" layoutY="35.0" prefHeight="21.0" prefWidth="196.0" />
+                                                <Label layoutX="29.0" layoutY="77.0" text="Collage Name" />
+                                                <TextField fx:id="collage_name" layoutX="133.0" layoutY="79.0" prefHeight="21.0" prefWidth="436.0" />
+                                                <Label layoutX="29.0" layoutY="114.0" text="Marks" />
+                                                <TextField fx:id="marks" layoutX="133.0" layoutY="116.0" prefHeight="21.0" prefWidth="153.0" />
+                                                <Button layoutX="517.0" layoutY="114.0" mnemonicParsing="false" onAction="#saveEmployeeQualification" text="Add" />
+                                             </children>
+                                          </Pane>
+                                          <Pane layoutX="13.0" layoutY="166.0" prefHeight="213.0" prefWidth="562.0">
+                                             <children>
+                                                <TableView fx:id="qtable" layoutY="11.0" prefHeight="197.0" prefWidth="565.0">
+                                                   <columns>
+                                                      <TableColumn fx:id="col1" prefWidth="55.0" text="Id" />
+                                                      <TableColumn fx:id="col2" prefWidth="153.0" text="University" />
+                                                      <TableColumn fx:id="col3" prefWidth="258.0" text="Collage" />
+                                                      <TableColumn fx:id="col4" minWidth="0.0" prefWidth="98.0" text="Marks" />
+                                                   </columns></TableView>
+                                             </children>
+                                          </Pane>
+                                       </children>
+                                    </Pane>
+                                 </children>
+                              </Pane>
+                           </content>
+                        </Tab>
+                        <Tab fx:id="prof" text="Professional Details">
+                           <content>
+                              <Pane prefHeight="200.0" prefWidth="200.0">
+                                 <children>
+                                    <Pane layoutX="2.0" layoutY="3.0" prefHeight="32.0" prefWidth="279.0">
+                                       <children>
+                                          <RadioButton fx:id="fresher" layoutY="1.0" mnemonicParsing="false" onAction="#handleExpEvent" text="Fresher" />
+                                          <RadioButton fx:id="professional" layoutX="140.0" mnemonicParsing="false" onAction="#handleExpEvent" text="Professional" />
+                                       </children>
+                                    </Pane>
+                                    <Pane fx:id="exp_panel" layoutX="7.0" layoutY="36.0" prefHeight="394.0" prefWidth="587.0">
+                                       <children>
+                                          <Pane layoutX="1.0" layoutY="14.0" prefHeight="153.0" prefWidth="585.0">
+                                             <children>
+                                                <Label id="title" layoutX="6.0" layoutY="-1.0" text="Previous Employer Details" />
+                                                <Label layoutX="29.0" layoutY="42.0" text="Experiance" />
+                                                <ComboBox fx:id="texp" layoutX="148.0" layoutY="42.0" prefWidth="150.0">
+                                                   <items>
+                                                      <FXCollections fx:factory="observableArrayList">
+                                                        <String fx:value="Fresher" />
+                                                        <String fx:value="0-1 year" />
+                                                        <String fx:value="1-3 years" />
+                                                        <String fx:value="3-5 years" />
+                                                        <String fx:value="5-8 years" />
+                                                        <String fx:value="8-10 years" />
+                                                        <String fx:value="More than 10 years" />
+                                                     </FXCollections>
+                                            </items>
+                                          </ComboBox>
+                                                <Label layoutX="29.0" layoutY="77.0" text="Compony Name" />
+                                                <TextField fx:id="compony_name" layoutX="148.0" layoutY="79.0" prefHeight="21.0" prefWidth="408.0" />
+                                                <Label layoutX="29.0" layoutY="114.0" text="Designation" />
+                                                <TextField fx:id="p_designation" layoutX="147.0" layoutY="116.0" prefHeight="21.0" prefWidth="153.0" />
+                                                <Button layoutX="512.0" layoutY="106.0" mnemonicParsing="false" onAction="#saveEmployeeExperiance" text="Add" />
+                                             </children>
+                                          </Pane>
+                                          <Pane layoutX="13.0" layoutY="169.0" prefHeight="213.0" prefWidth="562.0">
+                                             <children>
+                                                <TableView fx:id="ctable" layoutY="11.0" prefHeight="197.0" prefWidth="565.0">
+                                                   <columns>
+                                                      <TableColumn fx:id="p_col1" prefWidth="75.0" text="Id" />
+                                                      <TableColumn fx:id="p_col2" prefWidth="113.0" text="Experiance" />
+                                                      <TableColumn fx:id="p_col3" prefWidth="238.0" text="Compony " />
+                                                      <TableColumn fx:id="p_col4" prefWidth="137.0" text="Designation" />
+                                                   </columns></TableView>
+                                             </children>
+                                          </Pane>
+                                       </children>
+                                    </Pane>
+                                 </children>
+                              </Pane>
+                           </content>
+                        </Tab>
+                    </tabs>
+                  </TabPane>
+               </children>
+            </Pane>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>

@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.collections.*?>
+
+<AnchorPane fx:id="add_info" prefHeight="516.0" prefWidth="600.0" stylesheets="@../aviara/style/style.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.aviara.controller.Add_Company_InfoController">
+   <children>
+      <Pane layoutY="2.0" prefHeight="516.0" prefWidth="600.0" stylesheets="@../aviara/style/style.css">
+         <children>
+            <Pane id="top_section1" prefHeight="45.0" prefWidth="600.0">
+               <children>
+                  <Label id="title" layoutY="5.0" text="Add Information">
+                     <font>
+                        <Font size="17.0" />
+                     </font>
+                  </Label>
+                  <Label id="close-btn" fx:id="close_btn" layoutX="558.0" layoutY="-6.0" onMouseClicked="#close_window" onMouseEntered="#rotate" prefHeight="40.0" prefWidth="41.0" />
+               </children>
+            </Pane>
+            <Pane id="top1" layoutY="32.0" prefHeight="24.0" prefWidth="600.0" />
+            <TabPane layoutY="79.0" prefHeight="401.0" prefWidth="600.0" tabClosingPolicy="UNAVAILABLE">
+              <tabs>
+                <Tab text="Basic Information">
+                     <content>
+                        <Pane prefHeight="200.0" prefWidth="200.0">
+                           <children>
+                              <Label layoutX="64.0" layoutY="39.0" text="Company Name" textFill="WHITE" />
+                              <Label layoutX="64.0" layoutY="81.0" text="Registration No" textFill="WHITE" />
+                              <Label layoutX="64.0" layoutY="122.0" text="PAN No" textFill="WHITE" />
+                              <Label layoutX="64.0" layoutY="159.0" text="ESI No" textFill="WHITE" />
+                              <Label layoutX="64.0" layoutY="199.0" text="PF No" textFill="WHITE" />
+                              <TextField fx:id="cmp_name" layoutX="172.0" layoutY="35.0" prefHeight="25.0" prefWidth="150.0" />
+                              <TextField fx:id="reg" layoutX="172.0" layoutY="77.0" prefHeight="25.0" prefWidth="150.0" />
+                              <TextField fx:id="pan" layoutX="172.0" layoutY="118.0" prefHeight="25.0" prefWidth="150.0" />
+                              <TextField fx:id="esi" layoutX="172.0" layoutY="155.0" prefHeight="25.0" prefWidth="150.0" />
+                              <TextField fx:id="pf" layoutX="172.0" layoutY="195.0" prefHeight="25.0" prefWidth="150.0" />
+                           </children>
+                        </Pane>
+                     </content>
+                </Tab>
+                <Tab text="Address">
+                     <content>
+                        <Pane prefHeight="363.0" prefWidth="600.0">
+                           <children>
+                              <Label layoutX="64.0" layoutY="39.0" text="Address 1" textFill="WHITE" />
+                              <Label layoutX="63.0" layoutY="78.0" text="Address 2" textFill="WHITE" />
+                              <Label layoutX="65.0" layoutY="121.0" text="City" textFill="WHITE" />
+                              <Label layoutX="63.0" layoutY="156.0" text="State" textFill="WHITE" />
+                              <Label layoutX="61.0" layoutY="232.0" text="Country" textFill="WHITE" />
+                              <Label layoutX="61.0" layoutY="269.0" text="Contact No1" textFill="WHITE" />
+                              <Label layoutX="61.0" layoutY="305.0" text="Contact No2" textFill="WHITE" />
+                              <Label layoutX="62.0" layoutY="343.0" text="Email Id" textFill="WHITE" />
+                              <Label layoutX="63.0" layoutY="191.0" text="Zip Code" textFill="WHITE" />
+                              <TextField fx:id="add1" layoutX="172.0" layoutY="37.0" prefHeight="25.0" prefWidth="150.0" />
+                              <TextField fx:id="add2" layoutX="172.0" layoutY="76.0" prefHeight="25.0" prefWidth="150.0" />
+                              <TextField fx:id="city" layoutX="171.0" layoutY="114.0" prefHeight="25.0" prefWidth="150.0" />
+                              <TextField fx:id="state" layoutX="172.0" layoutY="152.0" prefHeight="25.0" prefWidth="150.0" />
+                              <TextField fx:id="zip" layoutX="172.0" layoutY="190.0" prefHeight="25.0" prefWidth="150.0" />
+                              <TextField fx:id="country" layoutX="171.0" layoutY="228.0" prefHeight="25.0" prefWidth="150.0" />
+                              <TextField fx:id="cntc1" layoutX="172.0" layoutY="265.0" prefHeight="25.0" prefWidth="150.0" />
+                              <TextField fx:id="cntc2" layoutX="172.0" layoutY="301.0" prefHeight="25.0" prefWidth="150.0" />
+                              <TextField fx:id="email" layoutX="172.0" layoutY="339.0" prefHeight="25.0" prefWidth="150.0" />
+                           </children>
+                        </Pane>
+                     </content>
+                </Tab>
+                  <Tab text="Financial Year">
+                     <content>
+                        <Pane prefHeight="200.0" prefWidth="200.0">
+                           <children>
+                              <Label fx:id="month" layoutX="64.0" layoutY="39.0" text="Month" textFill="WHITE" />
+                              <ComboBox fx:id="fmonth" layoutX="138.0" layoutY="36.0" prefWidth="150.0" promptText="--Select--">
+                              <items>
+                              <FXCollections fx:factory="observableArrayList">
+                              <String fx:value="January" />
+                              <String fx:value="February" />
+                              <String fx:value="March" />
+                              <String fx:value="April" />
+                              <String fx:value="May" />
+                              <String fx:value="June" />
+                              <String fx:value="July" />
+                              <String fx:value="August" />
+                              <String fx:value="September" />
+                              <String fx:value="October" />
+                              <String fx:value="November" />
+                              <String fx:value="December" />
+                              </FXCollections>
+                              </items>
+                              </ComboBox>
+                              <Label fx:id="month1" layoutX="14.0" layoutY="39.0" text="From" textFill="WHITE" />
+                              <Label fx:id="month2" layoutX="300.0" layoutY="36.0" text="Year" textFill="WHITE" />
+                              <TextField fx:id="fyear" layoutX="370.0" layoutY="36.0" />
+                              <Label fx:id="month11" layoutX="21.0" layoutY="94.0" text="To" textFill="WHITE" />
+                              <Label fx:id="month3" layoutX="64.0" layoutY="94.0" text="Month" textFill="WHITE" />
+                              <ComboBox fx:id="tmonth" layoutX="138.0" layoutY="94.0" prefWidth="150.0" promptText="--Select--">
+                                 <items>
+                                    <FXCollections fx:factory="observableArrayList">
+                                       <String fx:value="January" />
+                                       <String fx:value="February" />
+                                       <String fx:value="March" />
+                                       <String fx:value="April" />
+                                       <String fx:value="May" />
+                                       <String fx:value="June" />
+                                       <String fx:value="July" />
+                                       <String fx:value="August" />
+                                       <String fx:value="September" />
+                                       <String fx:value="October" />
+                                       <String fx:value="November" />
+                                       <String fx:value="December" />
+                                    </FXCollections>
+                                 </items>
+                              </ComboBox>
+                              <Label fx:id="month21" layoutX="300.0" layoutY="94.0" text="Year" textFill="WHITE" />
+                              <TextField fx:id="tyear" layoutX="370.0" layoutY="96.0" />
+                           </children>
+                        </Pane>
+                     </content>
+                  </Tab>
+              </tabs>
+            </TabPane>
+            <Button layoutX="216.0" layoutY="481.0" mnemonicParsing="false" onAction="#addCompanyInfo" prefHeight="32.0" prefWidth="68.0" text="Save" />
+            <Label fx:id="uname" layoutX="487.0" layoutY="55.0" prefHeight="25.0" prefWidth="80.0" />
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>

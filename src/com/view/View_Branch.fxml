@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="add_branch" fx:id="brnch" prefHeight="400.0" prefWidth="816.0" stylesheets="@../aviara/style/style.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.aviara.controller.View_BranchController">
+   <children>
+      <Pane layoutY="-1.0" prefHeight="400.0" prefWidth="816.0">
+         <children>
+            <Pane id="top_section1" prefHeight="32.0" prefWidth="816.0">
+               <children>
+                  <Label id="title" layoutX="-1.0" layoutY="7.0" text="Branch">
+                     <font>
+                        <Font size="17.0" />
+                     </font>
+                  </Label>
+                  <Label id="close-btn" fx:id="close_btn" layoutX="764.0" layoutY="-5.0" onMouseClicked="#close_window" onMouseEntered="#rotate" prefHeight="42.0" prefWidth="37.0" />
+               </children>
+            </Pane>
+            <Pane id="top1" layoutY="32.0" prefHeight="15.0" prefWidth="816.0" />
+            <TableView fx:id="view_branch" layoutX="23.0" layoutY="89.0" prefHeight="289.0" prefWidth="772.0">
+              <columns>
+                <TableColumn fx:id="col1" prefWidth="111.0" text="Branch Name" />
+                <TableColumn fx:id="col2" prefWidth="118.0" text="Branch Address" />
+                  <TableColumn fx:id="col3" minWidth="0.0" prefWidth="51.0" text="City" />
+                  <TableColumn fx:id="col4" prefWidth="92.0" text="State" />
+                  <TableColumn fx:id="col5" prefWidth="88.0" text="Country" />
+                  <TableColumn fx:id="col6" prefWidth="90.0" text="Phone No1" />
+                  <TableColumn fx:id="col7" prefWidth="91.0" text="Phone No2" />
+                  <TableColumn fx:id="col8" prefWidth="130.0" text="Email Id" />
+              </columns>
+            </TableView>
+         </children>
+      </Pane>
+      <Pane layoutY="45.0" prefHeight="42.0" prefWidth="816.0">
+         <children>
+            <Pane id="add_emp_panel" layoutX="18.0" layoutY="1.0" prefHeight="42.0" prefWidth="78.0">
+               <children>
+                  <Label id="add_emp" layoutX="1.0" layoutY="1.0" onMouseClicked="#openAnother" prefHeight="38.0" prefWidth="78.0" text="Add" />
+               </children>
+            </Pane>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" fx:id="employee" prefHeight="400.0" prefWidth="600.0" stylesheets="@../aviara/style/style.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.aviara.controller.EmpAttendanceController">
+   <children>
+      <Pane id="top_section1" prefHeight="24.0" prefWidth="740.0">
+         <children>
+            <Label id="title" layoutX="8.0" text="Attendance" />
+            <Label id="close-btn" fx:id="close_btn" layoutX="700.0" layoutY="-3.0" onMouseClicked="#handleClose" onMouseEntered="#rotate" prefHeight="42.0" prefWidth="46.0" />
+         </children>
+      </Pane>
+      <Pane id="top1" layoutY="32.0" prefHeight="15.0" prefWidth="740.0" />
+      <Pane id="info_panel" layoutX="11.0" layoutY="58.0" prefHeight="429.0" prefWidth="723.0">
+         <children>
+            <Label layoutX="14.0" layoutY="14.0" text="Select Database " />
+            <Label fx:id="path" layoutX="14.0" layoutY="50.0" prefHeight="25.0" prefWidth="292.0" />
+            <Button fx:id="browse" layoutX="122.0" layoutY="11.0" mnemonicParsing="false" onAction="#openFileChooser" prefHeight="32.0" prefWidth="108.0" text="Browse" />
+            <Label layoutX="324.0" layoutY="15.0" text="Enter Attendance Log file name" />
+            <TextField fx:id="tname" layoutX="531.0" layoutY="19.0" />
+            <CheckBox fx:id="set" layoutX="346.0" layoutY="53.0" mnemonicParsing="false" onAction="#setDefault" text="Set As default" />
+            <CheckBox fx:id="reset" layoutX="451.0" layoutY="53.0" mnemonicParsing="false" onAction="#reset" text="Reset" />
+            <Button fx:id="connect_btn" layoutX="622.0" layoutY="48.0" mnemonicParsing="false" onAction="#connectToAccess" text="Connect" />
+            <TableView fx:id="emptable" layoutX="9.0" layoutY="103.0" prefHeight="315.0" prefWidth="702.0">
+              <columns>
+                <TableColumn fx:id="col1" text="Emp Id" />
+                <TableColumn fx:id="col2" prefWidth="100.0" text="Date" />
+                  <TableColumn fx:id="col3" prefWidth="278.0" text="Name" />
+                  <TableColumn fx:id="col4" prefWidth="75.0" text="InTime" />
+                  <TableColumn fx:id="col5" prefWidth="97.0" text="OutTime" />
+                  <TableColumn fx:id="col6" prefWidth="71.0" text="Status" />
+              </columns>
+            </TableView>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>

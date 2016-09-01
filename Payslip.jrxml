@@ -1,0 +1,496 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="null" language="groovy" pageWidth="595" pageHeight="430" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="5" bottomMargin="5">
+	<parameter name="amt_words" class="java.lang.String"/>
+	<parameter name="month" class="java.lang.String"/>
+	<queryString language="SQL">
+		<![CDATA[SELECT
+     deduction_info.`deductio_name` AS deduction_info_deductio_name,
+     deduction_info.`deduction_percent` AS deduction_info_deduction_percent,
+     emp_salary.`id` AS emp_salary_id,
+     emp_salary.`emp_id` AS emp_salary_emp_id,
+     emp_salary.`name` AS emp_salary_name,
+     emp_salary.`salaryDate` AS emp_salary_salaryDate,
+     emp_salary.`basic_sal` AS emp_salary_basic_sal,
+     emp_salary.`allowance` AS emp_salary_allowance,
+     emp_salary.`increment` AS emp_salary_increment,
+     emp_salary.`bonus` AS emp_salary_bonus,
+     emp_salary.`reimbursment` AS emp_salary_reimbursment,
+     emp_salary.`workingDays` AS emp_salary_workingDays,
+     emp_salary.`totalLeaves` AS emp_salary_totalLeaves,
+     emp_salary.`paidLeaves` AS emp_salary_paidLeaves,
+     emp_salary.`unpaidLeaves` AS emp_salary_unpaidLeaves,
+     emp_salary.`paybleDays` AS emp_salary_paybleDays,
+     emp_salary.`totalSalary` AS emp_salary_totalSalary,
+     emp_salary.`totalDeductions` AS emp_salary_totalDeductions,
+     emp_salary.`grandTotal` AS emp_salary_grandTotal,
+     emp_salary.`paidSalary` AS emp_salary_paidSalary,
+     emp_salary.`month` AS emp_salary_month,
+     emp_salary.`year` AS emp_salary_year,
+     emp_salary.`other` AS emp_salary_other,
+     employee.`doj` AS employee_doj,
+     employee.`dept` AS employee_dept,
+     employee.`branch` AS employee_branch,
+     employee.`designation` AS employee_designation,
+     emp_bank.`acc_no` AS emp_bank_acc_no,
+     emp_bank.`pf_no` AS emp_bank_pf_no
+FROM
+     `employee` employee INNER JOIN `emp_bank` emp_bank ON employee.`emp_id` = emp_bank.`emp_id`
+     INNER JOIN `emp_salary` emp_salary ON employee.`emp_id` = emp_salary.`emp_id`
+     INNER JOIN `emp_deduction` emp_deduction ON employee.`emp_id` = emp_deduction.`emp_id`
+     INNER JOIN `deduction_info` deduction_info ON emp_deduction.`deduction_id` = deduction_info.`deduction_id`]]>
+	</queryString>
+	<field name="deduction_info_deductio_name" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="deduction_info_deduction_percent" class="java.lang.Double">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="emp_salary_id" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="emp_salary_emp_id" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="emp_salary_name" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="emp_salary_salaryDate" class="java.sql.Date">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="emp_salary_basic_sal" class="java.lang.Double">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="emp_salary_allowance" class="java.lang.Double">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="emp_salary_increment" class="java.lang.Double">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="emp_salary_bonus" class="java.lang.Double">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="emp_salary_reimbursment" class="java.lang.Double">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="emp_salary_workingDays" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="emp_salary_totalLeaves" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="emp_salary_paidLeaves" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="emp_salary_unpaidLeaves" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="emp_salary_paybleDays" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="emp_salary_totalSalary" class="java.lang.Double">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="emp_salary_totalDeductions" class="java.lang.Double">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="emp_salary_grandTotal" class="java.lang.Double">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="emp_salary_paidSalary" class="java.lang.Double">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="emp_salary_month" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="emp_salary_year" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="emp_salary_other" class="java.lang.Double">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="employee_doj" class="java.sql.Date">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="employee_dept" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="employee_branch" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="employee_designation" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="emp_bank_acc_no" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="emp_bank_pf_no" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="72" splitType="Stretch">
+			<image>
+				<reportElement x="36" y="7" width="120" height="53"/>
+				<imageExpression class="java.lang.String"><![CDATA["D:\\Payroll\\logo1.png"]]></imageExpression>
+			</image>
+			<staticText>
+				<reportElement x="248" y="18" width="222" height="21"/>
+				<textElement>
+					<font fontName="SansSerif" size="16" isBold="true"/>
+				</textElement>
+				<text><![CDATA[AVIARA SYSTEMS PVT LTD.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="248" y="39" width="222" height="21"/>
+				<textElement textAlignment="Center">
+					<font fontName="SansSerif" size="12" isBold="false"/>
+				</textElement>
+				<text><![CDATA[Wakdewadi,Pune]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="320" splitType="Stretch">
+			<textField>
+				<reportElement x="0" y="0" width="555" height="20" forecolor="#362472"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Arial" size="14" isBold="true"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA["Payslip For The Month "+$P{month}+" "+$F{emp_salary_year}]]></textFieldExpression>
+			</textField>
+			<rectangle>
+				<reportElement x="21" y="30" width="94" height="20"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="21" y="50" width="94" height="20"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="21" y="70" width="94" height="20"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="21" y="90" width="94" height="20"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="21" y="110" width="94" height="20"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="115" y="30" width="156" height="20"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="115" y="50" width="156" height="20"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="115" y="70" width="156" height="20"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="115" y="110" width="156" height="20"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="115" y="90" width="156" height="20"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="271" y="30" width="94" height="20"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="271" y="50" width="94" height="20"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="271" y="70" width="94" height="20"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="271" y="90" width="94" height="20"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="271" y="110" width="94" height="20"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="365" y="30" width="156" height="20"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="365" y="50" width="156" height="20"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="365" y="70" width="156" height="20"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="365" y="90" width="156" height="20"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="365" y="110" width="156" height="20"/>
+			</rectangle>
+			<staticText>
+				<reportElement x="28" y="30" width="78" height="20"/>
+				<textElement lineSpacing="1_1_2"/>
+				<text><![CDATA[Name]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="28" y="50" width="78" height="20"/>
+				<textElement lineSpacing="1_1_2"/>
+				<text><![CDATA[Designation]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="28" y="70" width="78" height="20"/>
+				<textElement lineSpacing="1_1_2"/>
+				<text><![CDATA[Department]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="28" y="90" width="78" height="20"/>
+				<textElement lineSpacing="1_1_2"/>
+				<text><![CDATA[Date]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="28" y="110" width="78" height="20"/>
+				<textElement lineSpacing="1_1_2"/>
+				<text><![CDATA[Working Days]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="126" y="30" width="135" height="20"/>
+				<textElement lineSpacing="1_1_2"/>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{emp_salary_name}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="126" y="50" width="135" height="20"/>
+				<textElement lineSpacing="1_1_2"/>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{employee_designation}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="126" y="70" width="135" height="20"/>
+				<textElement lineSpacing="1_1_2"/>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{employee_dept}]]></textFieldExpression>
+			</textField>
+			<textField pattern="dd/MM/yyyy">
+				<reportElement x="126" y="90" width="135" height="20"/>
+				<textElement lineSpacing="1_1_2"/>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{emp_salary_salaryDate}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="126" y="110" width="135" height="20"/>
+				<textElement lineSpacing="1_1_2"/>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{emp_salary_workingDays}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="278" y="30" width="78" height="20"/>
+				<textElement lineSpacing="1_1_2"/>
+				<text><![CDATA[Employee Id]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="278" y="50" width="78" height="20"/>
+				<textElement lineSpacing="1_1_2"/>
+				<text><![CDATA[PF No]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="278" y="70" width="78" height="20"/>
+				<textElement lineSpacing="1_1_2"/>
+				<text><![CDATA[Bank Acc No]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="278" y="90" width="78" height="20"/>
+				<textElement lineSpacing="1_1_2"/>
+				<text><![CDATA[Date Of Joining]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="278" y="110" width="78" height="20"/>
+				<textElement lineSpacing="1_1_2"/>
+				<text><![CDATA[Days Payable]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="376" y="30" width="135" height="20"/>
+				<textElement lineSpacing="1_1_2"/>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{emp_salary_emp_id}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="376" y="50" width="135" height="20"/>
+				<textElement lineSpacing="1_1_2"/>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{emp_bank_pf_no}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="376" y="70" width="135" height="20"/>
+				<textElement lineSpacing="1_1_2"/>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{emp_bank_acc_no}]]></textFieldExpression>
+			</textField>
+			<textField pattern="dd/MM/yyyy">
+				<reportElement x="376" y="90" width="135" height="20"/>
+				<textElement lineSpacing="1_1_2"/>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{employee_doj}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="376" y="110" width="135" height="20"/>
+				<textElement lineSpacing="1_1_2"/>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{emp_salary_paybleDays}]]></textFieldExpression>
+			</textField>
+			<rectangle>
+				<reportElement x="21" y="142" width="250" height="26"/>
+				<graphicElement>
+					<pen lineStyle="Double"/>
+				</graphicElement>
+			</rectangle>
+			<staticText>
+				<reportElement x="28" y="148" width="161" height="20"/>
+				<textElement lineSpacing="1_1_2"/>
+				<text><![CDATA[Earnings]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="199" y="146" width="67" height="20"/>
+				<textElement lineSpacing="1_1_2"/>
+				<text><![CDATA[Rs]]></text>
+			</staticText>
+			<rectangle>
+				<reportElement x="21" y="174" width="500" height="95"/>
+				<graphicElement>
+					<pen lineStyle="Double"/>
+				</graphicElement>
+			</rectangle>
+			<rectangle>
+				<reportElement x="26" y="179" width="163" height="20"/>
+			</rectangle>
+			<staticText>
+				<reportElement x="28" y="179" width="151" height="20"/>
+				<textElement lineSpacing="1_1_2"/>
+				<text><![CDATA[Basic]]></text>
+			</staticText>
+			<rectangle>
+				<reportElement x="189" y="179" width="77" height="20"/>
+			</rectangle>
+			<textField>
+				<reportElement x="199" y="179" width="62" height="20"/>
+				<textElement lineSpacing="1_1_2"/>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{emp_salary_basic_sal}]]></textFieldExpression>
+			</textField>
+			<rectangle>
+				<reportElement x="26" y="199" width="163" height="20"/>
+			</rectangle>
+			<staticText>
+				<reportElement x="28" y="199" width="151" height="20"/>
+				<textElement lineSpacing="1_1_2"/>
+				<text><![CDATA[Total Allowance]]></text>
+			</staticText>
+			<rectangle>
+				<reportElement x="189" y="199" width="77" height="20"/>
+			</rectangle>
+			<textField>
+				<reportElement x="199" y="199" width="62" height="20"/>
+				<textElement lineSpacing="1_1_2"/>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{emp_salary_allowance}]]></textFieldExpression>
+			</textField>
+			<rectangle>
+				<reportElement x="26" y="219" width="163" height="20"/>
+			</rectangle>
+			<staticText>
+				<reportElement x="28" y="219" width="151" height="20"/>
+				<textElement lineSpacing="1_1_2"/>
+				<text><![CDATA[Bonus]]></text>
+			</staticText>
+			<rectangle>
+				<reportElement x="189" y="219" width="77" height="20"/>
+			</rectangle>
+			<textField>
+				<reportElement x="199" y="219" width="62" height="20"/>
+				<textElement lineSpacing="1_1_2"/>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{emp_salary_bonus}]]></textFieldExpression>
+			</textField>
+			<rectangle>
+				<reportElement x="271" y="142" width="250" height="26"/>
+				<graphicElement>
+					<pen lineStyle="Double"/>
+				</graphicElement>
+			</rectangle>
+			<staticText>
+				<reportElement x="277" y="146" width="161" height="20"/>
+				<textElement lineSpacing="1_1_2"/>
+				<text><![CDATA[Deductions]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="449" y="145" width="67" height="20"/>
+				<textElement lineSpacing="1_1_2"/>
+				<text><![CDATA[Rs]]></text>
+			</staticText>
+			<rectangle>
+				<reportElement x="275" y="179" width="163" height="20"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="275" y="199" width="163" height="20"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="438" y="179" width="77" height="20"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="438" y="199" width="77" height="20"/>
+			</rectangle>
+			<staticText>
+				<reportElement x="278" y="179" width="151" height="20"/>
+				<textElement lineSpacing="1_1_2"/>
+				<text><![CDATA[PF]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="449" y="179" width="62" height="20"/>
+				<textElement lineSpacing="1_1_2"/>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{deduction_info_deduction_percent}+"%"]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="278" y="199" width="151" height="20"/>
+				<textElement lineSpacing="1_1_2"/>
+				<text><![CDATA[Other Deductions]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="449" y="199" width="62" height="20"/>
+				<textElement lineSpacing="1_1_2"/>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{emp_salary_other}]]></textFieldExpression>
+			</textField>
+			<rectangle>
+				<reportElement x="275" y="239" width="163" height="20"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="26" y="239" width="163" height="20"/>
+			</rectangle>
+			<staticText>
+				<reportElement x="28" y="239" width="151" height="20"/>
+				<textElement lineSpacing="1_1_2"/>
+				<text><![CDATA[Total Earnings]]></text>
+			</staticText>
+			<rectangle>
+				<reportElement x="189" y="239" width="77" height="20"/>
+			</rectangle>
+			<textField>
+				<reportElement x="199" y="239" width="62" height="20"/>
+				<textElement lineSpacing="1_1_2"/>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{emp_salary_totalSalary}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="275" y="239" width="151" height="20"/>
+				<textElement lineSpacing="1_1_2"/>
+				<text><![CDATA[Total Deductions]]></text>
+			</staticText>
+			<rectangle>
+				<reportElement x="439" y="239" width="77" height="20"/>
+			</rectangle>
+			<textField>
+				<reportElement x="449" y="239" width="62" height="20"/>
+				<textElement lineSpacing="1_1_2"/>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{emp_salary_totalDeductions}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="21" y="277" width="53" height="31"/>
+				<textElement lineSpacing="1_1_2">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Net Pay:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="74" y="277" width="94" height="31"/>
+				<textElement lineSpacing="1_1_2">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA["Rs "+$F{emp_salary_paidSalary}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="168" y="277" width="353" height="31"/>
+				<textElement lineSpacing="1_1_2">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$P{amt_words}]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageHeader>
+</jasperReport>

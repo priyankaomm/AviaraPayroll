@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--<!DOCTYPE hibernate-mapping PUBLIC
+  "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+  "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">-->
+  <!DOCTYPE hibernate-mapping SYSTEM "hibernate-mapping-3.0.dtd" >
+
+<hibernate-mapping>
+
+  <class name="com.aviara.bean.Userregistration" table="registration_info">
+      <id name="id" column="id" type="integer"> 
+          <generator class="increment"></generator> 
+      </id> 
+        
+        <!--<property name="username" column="username" type="string" unique="true"></property>-->   
+        <property name="password" column="password" type="string"></property> 
+        <property name="conf_password" column="conf_password" type="string"></property> 
+        <property name="seq_question1" column="seq_question1" type="string"></property>   
+        <property name="seq_ans1" column="seq_ans1" type="string"></property>
+        <property name="seq_question2" column="seq_question2" type="string"></property>
+        <property name="seq_ans2" column="seq_ans2" type="string"></property>
+        <property name="compony_id" column="compony_id" type="integer"></property>
+        <properties name="uk1" unique="true">
+        <property name="username" column="username" type="string" />
+        </properties>
+    </class>
+
+</hibernate-mapping>

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--<!DOCTYPE hibernate-configuration PUBLIC "-//Hibernate/Hibernate Configuration DTD 3.0//EN" 
+"http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">-->
+<!DOCTYPE hibernate-configuration SYSTEM "hibernate-configuration-3.0.dtd">
+
+<hibernate-configuration>
+  <session-factory>
+    <property name="hbm2ddl.auto">update</property>
+    <property name="hibernate.dialect">org.hibernate.dialect.MySQLDialect</property>
+    <property name="hibernate.connection.driver_class">com.mysql.jdbc.Driver</property>
+    <property name="hibernate.connection.url">jdbc:mysql://localhost:3306/payroll</property>
+    <property name="hibernate.connection.username">root</property>
+    <property name="hibernate.connection.password">vertrigo</property>
+    <mapping class="com.aviara.bean.Employee" file="" jar="" package="" resource="com/aviara/configuration/emp.hbm.xml"/>
+    <mapping class="" file="" jar="" package="" resource="com/aviara/configuration/contact.hbm.xml"/>
+    <mapping resource="com/aviara/configuration/address.hbm.xml"/>
+    <mapping resource="com/aviara/configuration/qualification.hbm.xml"/>
+    <mapping resource="com/aviara/configuration/experiance.hbm.xml"/>
+    <mapping resource="com/aviara/configuration/payment.hbm.xml"/>
+    <mapping resource="com/aviara/configuration/deduction.hbm.xml"/>
+    <mapping resource="com/aviara/configuration/bank.hbm.xml"/>
+    <mapping resource="com/aviara/configuration/holiday.hbm.xml"/>
+    <mapping resource="com/aviara/configuration/leave.hbm.xml"/>
+    <mapping resource="com/aviara/configuration/attendance.hbm.xml"/>
+    <mapping resource="com/aviara/configuration/dbinfo.hbm.xml"/>
+    <mapping resource="com/aviara/configuration/empallowance.hbm.xml"/>
+    <mapping resource="com/aviara/configuration/empleave.hbm.xml"/>
+    <mapping resource="com/aviara/configuration/empleavetaken.hbm.xml"/>
+    <mapping resource="com/aviara/configuration/monthlyleave.hbm.xml"/>
+    <mapping resource="com/aviara/configuration/salary.hbm.xml"/>
+    
+    <mapping resource="com/aviara/configuration/company_info.hbm.xml"/>
+    <mapping resource="com/aviara/configuration/branch.hbm.xml"/>
+    <mapping resource="com/aviara/configuration/department.hbm.xml"/>
+    <mapping resource="com/aviara/configuration/allowance.hbm.xml"/>
+    <mapping resource="com/aviara/configuration/deduction1.hbm.xml"/>
+    <mapping resource="com/aviara/configuration/leave1.hbm.xml"/>
+    
+    <mapping resource="com/aviara/configuration/userregistration.hbm.xml"/>
+  </session-factory>
+</hibernate-configuration>

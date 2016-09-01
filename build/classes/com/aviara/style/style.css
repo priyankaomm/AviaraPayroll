@@ -1,0 +1,537 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Aug 3, 2016, 12:25:37 PM
+    Author     : comp2
+*/
+
+.menu_btn{
+         -fx-graphic:  url("../images/menu.png");
+         -fx-background-radius: 0;
+         
+    }
+    #back{
+        -fx-background-image:url("../images/firstBack.png");
+        
+    }
+    #menu_bar{
+        -fx-background-color:rgba(25,100,133,1);
+    }
+    #second_img{
+        -fx-background-image:url("../images/Comp.png");
+        
+    }
+    #words_panel{
+        -fx-background-image:url("../images/words.png");
+        
+    }
+    .root
+    {
+        -fx-background-color:rgba(110,120,132,1);
+        
+       
+    }
+    .anchorPane
+    {
+       -fx-background-color:rgba(110,120,132,1); 
+    }
+    #top_pane
+    {
+        -fx-background-color:#FFFFFF;
+        //-fx-border-color: rgba(49,66,82,1);
+        //-fx-border-width: 2;
+        -fx-max-height:55;
+        -fx-min-height:55;
+        -fx-margin-bottom:0;
+        
+    }
+    #top_section{
+        -fx-background-color:rgba(55,156,198,1);
+        -fx-max-height:24;
+        -fx-min-height:24;
+        
+    }
+    #top_section1{
+        -fx-background-color:#FFFFFF;
+        -fx-max-height:32;
+        -fx-min-height:32;
+        
+    }
+    #top1{
+        -fx-background-color:rgba(55,156,198,1);
+        -fx-max-height:15;
+        -fx-min-height:15;
+        
+    }
+    #compony_pane
+    {
+        -fx-background-image:url("../images/scomp.png");
+         -fx-background-repeat: stretch;   
+    }
+    
+    #emp_pane{
+        -fx-background-image:url("../images/emp.png");
+         -fx-background-repeat: stretch;   
+    }
+    #home_pane{
+        -fx-background-image:url("../images/home.png");
+         -fx-background-repeat: stretch;   
+    }
+    #home_pane:hover{
+        
+         -fx-scale-x: 1.2;  
+         -fx-scale-y: 1.2;  
+    }
+    #report_pane{
+        -fx-background-image:url("../images/report.png");
+         -fx-background-repeat: stretch;   
+    }
+    #logout_pane{
+        -fx-background-image:url("../images/logout.png");
+         -fx-background-repeat: stretch;   
+    }
+    #c_menu
+    {
+        -fx-background-color:rgba(243,243,243,1);
+        -fx-max-width:150;
+        -fx-min-width:150;
+    }
+    #mitems:hover
+    {
+        -fx-background-color:rgba(55,156,198,0.7);
+        
+    }
+    #mitems
+    {
+        -fx-text-fill:#000000;
+        -fx-max-height:24;
+        -fx-min-height:24;
+        -fx-max-width:150;
+        -fx-min-width:150;
+        -fx-font-family: "Times New Roman";
+        -fx-font-size: 9pt;
+        -fx-padding: 5 10 5 10; 
+        
+    }
+    #e_menu
+    {
+        -fx-background-color:rgba(243,243,243,1);
+        -fx-max-width:150;
+        -fx-min-width:150;
+    }
+    #r_menu
+    {
+        -fx-background-color:rgba(243,243,243,1);
+        -fx-max-width:150;
+        -fx-min-width:150;
+    }
+    .button{
+    -fx-padding: 5 15 5 15;   
+    -fx-border-color: #e2e2e2;
+    -fx-border-width: 0.5;
+    -fx-background-radius: 0;
+    -fx-background-color: #2b6eb2;
+    -fx-font-family: "Open Sans", Helvetica, Arial, sans-serif;
+    -fx-font-size: 10pt;
+    -fx-text-fill: #d8d8d8;
+    -fx-background-insets: 0 0 0 0, 0, 1, 2;
+    
+}
+.button:hover{
+    -fx-background-color:rgba(55,156,198,1);
+    -fx-font-size: 10pt;
+    -fx-text-fill: #000000;
+    -fx-border-color: #000000;
+}
+.label{
+    -fx-font-family: "Times New Roman";
+    -fx-font-size: 10pt;
+    -fx-text-fill: #d8d8d8;
+    -fx-padding: 5 10 5 10;  
+    
+}
+#tdate{
+    -fx-font-family: "Times New Roman";
+    -fx-font-size: 12pt;
+    -fx-text-fill: #d8d8d8;
+    -fx-padding: 5 10 5 10;  
+    -fx-font-weight: bold;
+}
+.tab-pane .tab-header-area .tab-header-background {
+    -fx-opacity: 0;
+}
+
+.tab-pane
+{
+    -fx-tab-min-width:90px;
+}
+
+.tab{
+    -fx-background-insets: 0 1 0 1,0,0;
+}
+.tab-pane .tab
+{
+    -fx-background-color: #e6e6e6;
+
+}
+
+.tab-pane .tab:selected
+{
+    -fx-background-color: #3c3c3c;
+}
+
+.tab .tab-label { 
+    -fx-alignment: CENTER;
+    -fx-text-fill: #828282;
+    -fx-font-size: 12px;
+    -fx-font-weight: bold;
+}
+
+.tab:selected .tab-label { 
+    -fx-alignment: CENTER;
+    -fx-text-fill: #d8d8d8;
+}
+.text-field {
+    
+    -fx-background-color: transparent, white, transparent, white;
+    -fx-background-radius: 0, 0, 0, 0;
+    -fx-padding: 0.166667em;
+    -fx-font-family: "Times New Roman";
+    -fx-font-size: 10pt;
+    -fx-text-fill: #000000;
+    -fx-prompt-text-fill: lightgray;
+}
+
+.text-field:focused {
+  
+    -fx-background-color: white;
+    -fx-background-radius: 0, 0, 0, 0;
+    -fx-padding: 0.166667em;
+}
+.radio-button {
+    -fx-text-fill:#d8d8d8;
+    -fx-font-family: "Times New Roman";
+    -fx-font-size: 10pt;
+    -fx-padding: 5 10 5 10;  
+    
+}
+#close-btn{
+    -fx-graphic: url("../images/close32.png");
+    
+}
+#close-btn:hover{
+    //-fx-scale-x:1.2;
+    //-fx-scale-y:1.2;
+    //-fx-rotate:90;
+    
+}
+#contact_scroll .viewport {
+   -fx-background-color:transparent;
+   -fx-border-width:0;
+ 
+}
+#contact_scroll {
+   -fx-background-color: transparent;
+   -fx-border-width:0;
+}
+.titled-pane > *.content 
+{
+   -fx-background-color: rgba(110,120,132,1);
+}
+#title
+{
+    -fx-font-family: "Times New Roman";
+    -fx-font-size: 13pt;
+    -fx-text-fill: rgba(0,47,94,1);
+    -fx-padding: 5 10 5 10;  
+    -fx-font-weight: bold;
+}
+.table-view{
+   -fx-background-color: transparent;
+}
+
+.table-view:focused{
+    -fx-background-color: transparent;
+}
+
+/* Spaltenköpfe
+    Struktur column-header-background -> column-header */
+
+.table-view .column-header-background{
+    -fx-background-color: linear-gradient(#131313 0%, #424141 100%);
+}
+
+.table-view .column-header-background .label{
+    -fx-background-color: transparent;
+    -fx-text-fill: white;
+}
+
+.table-view .column-header {
+    -fx-background-color: transparent;
+}
+
+.table-view .table-cell{
+    -fx-text-fill: white;
+}
+
+.table-row-cell{
+    -fx-background-color:  rgba(66,74,93,0.2);
+    -fx-background-insets: 0, 0 0 1 0;
+    -fx-padding: 0.0em; /* 0 */
+}
+
+
+
+.table-row-cell:selected {
+    -fx-background-color: rgba(104,223,240,0.5);
+    -fx-background-insets: 0;
+    -fx-background-radius: 1;
+}
+
+.table-view > .virtual-flow > .scroll-bar:vertical,
+.table-view > .virtual-flow > .scroll-bar:vertical > .track,
+.table-view > .virtual-flow > .scroll-bar:vertical > .track-background, 
+.table-view > .virtual-flow > .scroll-bar:horizontal,
+.table-view > .virtual-flow > .scroll-bar:horizontal > .track,
+.table-view > .virtual-flow > .scroll-bar:horizontal > .track-background {
+    -fx-background-color: transparent;
+}
+
+
+
+.table-view > .virtual-flow > .scroll-bar > .increment-button, 
+.table-view > .virtual-flow > .scroll-bar > .decrement-button {
+    -fx-opacity: 0;
+}
+#side_menu_panel
+{
+    -fx-background-color: rgba(255,255,255,1);
+    -fx-border-style: solid inside;
+    -fx-border-color: rgba(202,202,202,1);
+    -fx-border-insets: 5;
+}
+#side_back
+{
+     -fx-background-color: rgba(55,156,198,1);
+    
+}
+#add_emp
+{
+    -fx-graphic: url("../images/emp1.png");
+    
+}
+#add_emp:hover
+{
+    
+    -fx-scale-x:1.2;
+    -fx-scale-y:1.2;
+ 
+}
+#edit_emp1
+{
+    -fx-graphic: url("../images/edit.png");
+    
+}
+
+#edit_emp1:hover
+{
+    
+    -fx-scale-x:1.2;
+    -fx-scale-y:1.2;
+ 
+}
+#d1_emp
+{
+    -fx-graphic: url("../images/d3.png");
+    
+}
+
+#d1_emp:hover
+{
+    
+    -fx-scale-x:1.2;
+    -fx-scale-y:1.2;
+ 
+}
+#a1_emp
+{
+    -fx-graphic: url("../images/a3.png");
+    
+}
+
+#a1_emp:hover
+{
+    
+    -fx-scale-x:1.2;
+    -fx-scale-y:1.2;
+ 
+}
+#s1_emp
+{
+    -fx-graphic: url("../images/s4.png");
+    
+}
+
+#s1_emp:hover
+{
+    
+    -fx-scale-x:1.2;
+    -fx-scale-y:1.2;
+ 
+}
+#l1_emp
+{
+    -fx-graphic: url("../images/l1.png");
+    
+}
+
+#l1_emp:hover
+{
+    
+    -fx-scale-x:1.2;
+    -fx-scale-y:1.2;
+ 
+}
+#b1_emp
+{
+    -fx-graphic: url("../images/b1.png");
+    
+}
+
+#b1_emp:hover
+{
+    
+    -fx-scale-x:1.2;
+    -fx-scale-y:1.2;
+ 
+}
+#del_emp
+{
+    -fx-graphic: url("../images/delete1.png");
+       
+}
+
+#del_emp:hover
+{
+    
+    -fx-scale-x:1.2;
+    -fx-scale-y:1.2;
+ 
+}
+#pay_emp
+{
+    -fx-graphic: url("../images/salary1.png");
+       
+}
+
+#pay_emp:hover
+{
+    
+    -fx-scale-x:1.2;
+    -fx-scale-y:1.2;
+ 
+}
+#leave_emp
+{
+    -fx-graphic: url("../images/leave1.png");
+       
+}
+
+#leave_emp:hover
+{
+    
+    -fx-scale-x:1.2;
+    -fx-scale-y:1.2;
+ 
+}
+#info_panel
+{
+    -fx-border-style:solid inside;
+    -fx-border-color:#d8d8d8;
+    -fx-border-insets: 5;
+}
+#emp_icon
+{
+    -fx-graphic: url("../images/emp1-28.png");
+    -fx-text-fill:#000000;
+    -fx-padding: 0 0 0 0;  
+  
+}
+#t_icon
+{
+    -fx-graphic: url("../images/t4.png");
+    -fx-text-fill:#000000;
+    -fx-padding: 0 0 0 0;  
+  
+}
+#t_icon:hover 
+{
+    -fx-background-color:rgba(55,156,198,0.7);
+}
+#c_icon
+{
+    -fx-graphic: url("../images/compony.png");
+    -fx-text-fill:#000000;
+    -fx-padding: 0 0 0 0;  
+  
+}
+#c_icon:hover 
+{
+    -fx-background-color:rgba(55,156,198,0.7);
+}
+#r_icon
+{
+    -fx-graphic: url("../images/report1.png");
+    -fx-text-fill:#000000;
+    -fx-padding: 0 0 0 0;  
+  
+}
+#r_icon:hover 
+{
+    -fx-background-color:rgba(55,156,198,0.7);
+}
+#a_icon
+{
+    -fx-graphic: url("../images/a1.png");
+    -fx-text-fill:#000000;
+    -fx-padding: 0 0 0 0;  
+  
+}
+#a_icon:hover 
+{
+    -fx-background-color:rgba(55,156,198,0.7);
+}
+#cl_icon
+{
+    -fx-graphic: url("../images/calendar.png");
+    -fx-text-fill:#000000;
+    -fx-padding: 0 0 0 0;  
+  
+}
+#cl_icon:hover 
+{
+    -fx-background-color:rgba(55,156,198,0.7);
+}
+#emp_icon:hover 
+{
+    -fx-background-color:rgba(55,156,198,0.7);
+}
+#scroll_pane > .viewport {
+   -fx-background-color: transparent;
+}
+#scroll_pane {
+   -fx-background-color:rgba(110,120,132,1);
+}
+
+#t2
+{
+   -fx-font: 12pt "Tahoma Bold";   
+   -fx-padding: 5 10 5 10;  
+   -fx-font-weight: bold;
+}
+#loginpane{
+        -fx-background-image:url("../images/Payroll-Login.png");
+    }

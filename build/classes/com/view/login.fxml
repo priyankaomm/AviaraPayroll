@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" fx:id="login" prefHeight="409.0" prefWidth="699.0" stylesheets="@../aviara/style/style.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.aviara.controller.LoginController">
+   <children>
+      <Pane id="loginpane" layoutX="-1.0" prefHeight="409.0" prefWidth="703.0">
+         <cursor>
+            <Cursor fx:constant="DEFAULT" />
+         </cursor>
+         <children>
+            <Label layoutX="329.0" layoutY="173.0" prefHeight="25.0" prefWidth="85.0" text="User Name:">
+               <font>
+                  <Font size="13.0" />
+               </font>
+            </Label>
+            <Label layoutX="335.0" layoutY="205.0" prefHeight="25.0" prefWidth="85.0" text=" Password:">
+               <font>
+                  <Font size="13.0" />
+               </font>
+            </Label>
+            <TextField fx:id="username" layoutX="426.0" layoutY="175.0" promptText="Enter Username Here" />
+            <Button id="Button1" layoutX="574.0" layoutY="332.0" mnemonicParsing="false" onAction="#getAllUser" prefHeight="32.0" prefWidth="85.0" text="Login" />
+            <Label id="close-btn" fx:id="close_btn" layoutX="651.0" onMouseClicked="#close_window" onMouseEntered="#rotate" prefHeight="42.0" prefWidth="46.0" />
+            <Label layoutX="302.0" layoutY="238.0" prefHeight="25.0" prefWidth="115.0" text="Compony Name:">
+               <font>
+                  <Font size="13.0" />
+               </font>
+            </Label>
+            <ComboBox fx:id="cname" layoutX="426.0" layoutY="238.0" prefHeight="25.0" prefWidth="157.0" />
+            <Hyperlink layoutX="505.0" layoutY="371.0" text="Forgot Password" />
+            <Hyperlink layoutX="609.0" layoutY="371.0" onAction="#SignUp" text="Sign Up" />
+            <Label layoutX="310.0" layoutY="277.0" prefHeight="25.0" prefWidth="115.0" text="Financial Year:">
+               <font>
+                  <Font size="13.0" />
+               </font>
+            </Label>
+            <ComboBox fx:id="fyear" layoutX="427.0" layoutY="277.0" prefHeight="25.0" prefWidth="157.0" />
+            <PasswordField fx:id="Password" layoutX="425.0" layoutY="205.0" />
+         </children></Pane>
+   </children>
+</AnchorPane>

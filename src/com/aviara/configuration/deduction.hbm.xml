@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE hibernate-mapping SYSTEM "hibernate-mapping-3.0.dtd" >
+
+<hibernate-mapping>
+   <class name="com.aviara.bean.Deduction" table="emp_deduction">
+      <id name="id" column="id" type="integer"> 
+          <generator class="increment"></generator> 
+      </id> 
+        <property name="emp_id" column="emp_id" type="string"></property> 
+        <property name="deduction_id" column="deduction_id" type="integer"></property>   
+   </class>
+  
+
+</hibernate-mapping>
+

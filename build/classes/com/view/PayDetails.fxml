@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.collections.*?>
+
+<AnchorPane id="AnchorPane" fx:id="employee" prefHeight="402.0" prefWidth="450.0" stylesheets="@../aviara/style/style.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.aviara.controller.PayDetailsController">
+   <children>
+      <Pane id="top_section1" layoutY="2.0" prefHeight="32.0" prefWidth="460.0">
+         <children>
+            <Label id="title" layoutX="9.0" text="Pay Rate" />
+            <Label id="close-btn" fx:id="close_btn" layoutX="408.0" layoutY="-7.0" onMouseClicked="#handleClose" onMouseEntered="#rotate" prefHeight="42.0" prefWidth="39.0" />
+         </children>
+      </Pane>
+      <Pane id="top1" layoutY="35.0" prefHeight="15.0" prefWidth="460.0" />
+      <Pane layoutY="54.0" prefHeight="380.0" prefWidth="460.0">
+         <children>
+            <Label layoutX="12.0" layoutY="3.0" text="Payment Details" />
+            <Pane id="info_panel" layoutX="11.0" layoutY="28.0" prefHeight="305.0" prefWidth="445.0">
+               <children>
+                  <Label layoutX="30.0" layoutY="15.0" text="Employee Type" />
+                  <ComboBox fx:id="emp_type" layoutX="162.0" layoutY="15.0" prefWidth="150.0">
+                        <items>
+                            <FXCollections fx:factory="observableArrayList">
+                                <String fx:value="Permanent" />
+                                <String fx:value="Contract Based" />
+                               
+                            </FXCollections>
+                        </items>
+                   </ComboBox>
+                  <Label layoutX="34.0" layoutY="65.0" prefHeight="25.0" prefWidth="95.0" text="Basic Salary" />
+                  <TextField fx:id="basic_sal" layoutX="163.0" layoutY="67.0" onAction="#calculateTotal" onMouseClicked="#setTextBox" prefHeight="21.0" prefWidth="105.0" text="0.00" />
+                  <Label layoutX="267.0" layoutY="65.0" prefHeight="25.0" prefWidth="95.0" text="Per month" />
+                  <Label layoutX="35.0" layoutY="228.0" text="Next Payment" />
+                  <DatePicker fx:id="nextPay" layoutX="162.0" layoutY="231.0" prefHeight="21.0" prefWidth="150.0" />
+                  <Label layoutX="35.0" layoutY="106.0" prefHeight="25.0" prefWidth="95.0" text="HRA" />
+                  <TextField fx:id="hra" layoutX="163.0" layoutY="108.0" onAction="#calculateTotal" onMouseClicked="#setTextBox" prefHeight="21.0" prefWidth="105.0" text="0.00" />
+                  <Label layoutX="35.0" layoutY="153.0" prefHeight="25.0" prefWidth="116.0" text="Other Allowance" />
+                  <TextField fx:id="other" layoutX="163.0" layoutY="154.0" onAction="#calculateTotal" onMouseClicked="#setTextBox" prefHeight="21.0" prefWidth="105.0" text="0.00" />
+                  <Label layoutX="35.0" layoutY="192.0" prefHeight="25.0" prefWidth="116.0" text="Total" />
+                  <TextField fx:id="total" layoutX="163.0" layoutY="194.0" onAction="#calculateTotal" onMouseClicked="#setTextBox" prefHeight="21.0" prefWidth="105.0" text="0.00" />
+                  <Label layoutX="35.0" layoutY="266.0" text="Increment Date" />
+                  <DatePicker fx:id="incDate" layoutX="162.0" layoutY="268.0" prefHeight="21.0" prefWidth="150.0" />
+               </children>
+            </Pane>
+            <Label id="e_id" fx:id="e_id" layoutX="405.0" layoutY="2.0" prefHeight="25.0" prefWidth="37.0" />
+            <Button layoutX="364.0" layoutY="339.0" mnemonicParsing="false" onAction="#closeCurrent" prefHeight="32.0" prefWidth="83.0" text="Cancel" />
+            <Button fx:id="save" layoutX="220.0" layoutY="339.0" mnemonicParsing="false" onAction="#savePaymentDetails" prefHeight="32.0" prefWidth="62.0" text="Save" />
+            <Button fx:id="back_btn" layoutX="148.0" layoutY="339.0" mnemonicParsing="false" onAction="#openEmployee" prefHeight="32.0" prefWidth="62.0" text="Back" />
+            <Button fx:id="next" layoutX="291.0" layoutY="339.0" mnemonicParsing="false" onAction="#openNext" prefHeight="32.0" prefWidth="62.0" text="Next" />
+            <Button fx:id="edit" layoutX="14.0" layoutY="339.0" mnemonicParsing="false" onAction="#openEmployee" prefHeight="32.0" prefWidth="62.0" text="Edit" />
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE hibernate-mapping SYSTEM "hibernate-mapping-3.0.dtd" >
+
+<hibernate-mapping>
+   <class name="com.aviara.bean.EmpLeave" table="emp_leave">
+      <id name="id" column="id" type="integer"> 
+          <generator class="increment"></generator> 
+      </id> 
+        <property name="emp_id" column="emp_id" type="string"></property> 
+        <property name="leave_id" column="leave_id" type="integer"></property> 
+        <property name="applicableFrom" column="applicableFrom" type="date"></property> 
+        <property name="tLeaveAssigned" column="tLeaveAssigned" type="integer"></property> 
+        <property name="leavesTaken" column="leavesTaken" type="integer"></property> 
+        <property name="remLeaves" column="remLeaves" type="integer"></property>      
+   </class>
+  
+
+</hibernate-mapping>
+

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE hibernate-mapping SYSTEM "hibernate-mapping-3.0.dtd" >
+  
+<hibernate-mapping>
+<class name="com.aviara.bean.Leave" table="emp_leave">
+      <id name="id" column="id" type="integer"> 
+          <generator class="increment"></generator> 
+      </id> 
+        <property name="date" column="date" type="date" ></property> 
+        <property name="emp_id" column="emp_id" type="string"></property>   
+        <property name="type" column="type" type="string"></property> 
+        <property name="status" column="status" type="integer"></property> 
+       
+    </class>
+  
+</hibernate-mapping>

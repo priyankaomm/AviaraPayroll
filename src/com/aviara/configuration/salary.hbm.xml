@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE hibernate-mapping SYSTEM "hibernate-mapping-3.0.dtd" >
+
+<hibernate-mapping>
+   <class name="com.aviara.bean.Salary" table="emp_salary">
+      <id name="id" column="id" type="integer"> 
+          <generator class="increment"></generator> 
+      </id> 
+        <property name="emp_id" column="emp_id" type="string"></property> 
+        <property name="name" column="name" type="string"></property> 
+        <property name="salaryDate" column="salaryDate" type="date"></property>   
+        <property name="basic_sal" column="basic_sal" type="double"></property> 
+        <property name="allowance" column="allowance" type="double"></property> 
+        <property name="increment" column="increment" type="double"></property>   
+        <property name="bonus" column="bonus" type="double"></property> 
+        <property name="reimbursment" column="reimbursment" type="double"></property> 
+        <property name="workingDays" column="workingDays" type="integer"></property> 
+        <property name="totalLeaves" column="totalLeaves" type="integer"></property>
+        <property name="paidLeaves" column="paidLeaves" type="integer"></property> 
+        <property name="unpaidLeaves" column="unpaidLeaves" type="integer"></property> 
+        <property name="paybleDays" column="paybleDays" type="integer"></property>
+        
+        <property name="totalSalary" column="totalSalary" type="double"></property> 
+        <property name="totalDeductions" column="totalDeductions" type="double"></property>  
+        <property name="grandTotal" column="grandTotal" type="double"></property>
+        <property name="paidSalary" column="paidSalary" type="double"></property> 
+        <property name="other" column="other" type="double"></property> 
+        <property name="month" column="month" type="integer"></property> 
+        <property name="monthInWords" column="monthInWords" type="string"></property> 
+        <property name="year" column="year" type="integer"></property>
+    </class>
+  
+
+</hibernate-mapping>
+

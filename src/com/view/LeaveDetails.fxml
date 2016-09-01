@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.collections.*?>
+
+<AnchorPane id="AnchorPane" fx:id="employee" prefHeight="569.0" prefWidth="760.0" stylesheets="@../aviara/style/style.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.aviara.controller.LeaveDetailsController">
+   <children>
+      <Pane layoutY="-2.0" prefHeight="572.0" prefWidth="760.0" stylesheets="@../aviara/style/style.css">
+         <children>
+            <Pane id="top1" layoutY="32.0" minHeight="7.0" prefHeight="15.0" prefWidth="760.0" />
+            <Pane id="info_panel" layoutX="1.0" layoutY="44.0" prefHeight="48.0" prefWidth="760.0">
+               <children>
+                  <Label layoutX="14.0" layoutY="5.0" prefHeight="32.0" prefWidth="101.0" text="Employee Id:" />
+                  <TextField fx:id="emp_id" layoutX="116.0" layoutY="11.0" prefHeight="22.0" prefWidth="101.0" />
+                  <Label layoutX="333.0" layoutY="5.0" prefHeight="32.0" prefWidth="66.0" text="Name:" />
+                  <TextField fx:id="name" layoutX="434.0" layoutY="11.0" prefHeight="22.0" prefWidth="202.0" />
+               </children>
+            </Pane>
+            <Pane id="info_panel" layoutX="-2.0" layoutY="93.0" prefHeight="239.0" prefWidth="760.0">
+               <children>
+                  <Label layoutX="8.0" layoutY="131.0" prefHeight="25.0" prefWidth="52.0" text="Total" />
+                  <Label layoutX="7.0" layoutY="95.0" prefHeight="9.0" prefWidth="108.0" text="Leave Name:" />
+                  <Label layoutX="7.0" layoutY="14.0" prefHeight="25.0" prefWidth="108.0" text="From Date:" />
+                  <DatePicker fx:id="fdate" layoutX="123.0" layoutY="16.0" onAction="#total1" prefHeight="21.0" prefWidth="115.0" />
+                  <Label layoutX="7.0" layoutY="53.0" prefHeight="25.0" prefWidth="108.0" text="To Date:" />
+                  <Label fx:id="total" layoutX="123.0" layoutY="131.0" prefHeight="25.0" prefWidth="115.0" />
+                  <ComboBox fx:id="leave_type" layoutX="123.0" layoutY="96.0" onAction="#getNoOfLeaves" prefHeight="25.0" prefWidth="115.0" promptText="--Select--">
+                  
+                  </ComboBox>
+                  <Label layoutX="320.0" layoutY="14.0" prefHeight="25.0" prefWidth="66.0" text="Status:" />
+                  <CheckBox fx:id="status" layoutX="434.0" layoutY="18.0" mnemonicParsing="false" onAction="#handleStatus" prefHeight="17.0" prefWidth="115.0" text="Pending" />
+                  <Label layoutX="320.0" layoutY="53.0" prefHeight="25.0" prefWidth="101.0" text="Approved by :" />
+                  <ComboBox fx:id="appBy" layoutX="434.0" layoutY="53.0" prefHeight="25.0" prefWidth="101.0" promptText="--select--">
+                     <items>
+                        <FXCollections fx:factory="observableArrayList">
+                           <String fx:value="HR" />
+                           <String fx:value="Team Lead" />
+                           <String fx:value="Manager" />
+                        </FXCollections>
+                     </items>
+                  </ComboBox>
+                  <TextField fx:id="aname" layoutX="434.0" layoutY="96.0" prefHeight="25.0" prefWidth="303.0" />
+                  <Label layoutX="320.0" layoutY="96.0" prefHeight="25.0" prefWidth="89.0" text="Name:" />
+                  <Label layoutX="320.0" layoutY="148.0" prefHeight="25.0" prefWidth="89.0" text="Remark:" />
+                  <TextArea fx:id="remarks" layoutX="434.0" layoutY="147.0" prefHeight="25.0" prefWidth="303.0" />
+                  <Button layoutX="246.0" layoutY="191.0" mnemonicParsing="false" onAction="#saveEmpLeaves" prefHeight="25.0" prefWidth="66.0" text="Save " />
+                  <Button layoutX="320.0" layoutY="191.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="66.0" text="Close" />
+                  <Button layoutX="396.0" layoutY="191.0" mnemonicParsing="false" prefHeight="15.0" prefWidth="66.0" text="Back" />
+                  <Label layoutX="8.0" layoutY="166.0" prefHeight="25.0" prefWidth="89.0" text="Remaining" />
+                  <Label fx:id="rem" layoutX="123.0" layoutY="166.0" prefHeight="25.0" prefWidth="115.0" />
+                  <DatePicker fx:id="tdate" layoutX="123.0" layoutY="55.0" onAction="#total2" prefHeight="21.0" prefWidth="115.0" />
+               </children>
+            </Pane>
+            <Pane id="info_panel" layoutX="-2.0" layoutY="332.0" prefHeight="239.0" prefWidth="760.0">
+               <children>
+                  <TableView fx:id="ltable" layoutX="7.0" layoutY="48.0" prefHeight="183.0" prefWidth="746.0">
+                     <columns>
+                        <TableColumn fx:id="col1" prefWidth="64.0" text="Sr.No" />
+                        <TableColumn fx:id="col2" prefWidth="82.0" text="Emp Id" />
+                        <TableColumn fx:id="col3" prefWidth="88.0" text="From Date" />
+                        <TableColumn fx:id="col4" prefWidth="75.0" text="To Date" />
+                        <TableColumn fx:id="col5" prefWidth="91.0" text="Total Days" />
+                        <TableColumn fx:id="col6" prefWidth="97.0" text="Leave Name" />
+                        <TableColumn fx:id="col7" text="Status" />
+                        <TableColumn fx:id="col8" prefWidth="168.0" text="Approved By" />
+                     </columns>
+                  </TableView>
+                  <Pane id="top_section1" layoutX="10.0" layoutY="8.0">
+                     <children>
+                        <Label id="title" prefHeight="30.0" prefWidth="737.0" stylesheets="@../../../build/classes/com/aviara/style/style.css" text="Leave Summery Of Current Month " />
+                     </children>
+                  </Pane>
+               </children>
+            </Pane>
+         </children>
+      </Pane>
+      <Pane id="top_section1" layoutY="-3.0" maxHeight="54.0" minHeight="25.0" prefHeight="25.0" prefWidth="760.0">
+         <children>
+            <Label id="title" layoutY="-2.0" prefHeight="26.0" prefWidth="140.0" stylesheets="@../../../build/classes/com/aviara/style/style.css" text="Leave Details" />
+            <Label id="close-btn" fx:id="close_btn" layoutX="708.0" layoutY="-3.0" onMouseClicked="#handleClose" onMouseEntered="#rotate" prefHeight="42.0" prefWidth="46.0" />
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>

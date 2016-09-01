@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE hibernate-mapping SYSTEM "hibernate-mapping-3.0.dtd" >
+
+<hibernate-mapping>
+
+  <class name="com.aviara.bean.Branch" table="branch_info">
+      <id name="branch_id" column="branch_id" type="integer"> 
+          <generator class="increment"></generator> 
+      </id> 
+        <property name="branch_name" column="branch_name" type="string"></property> 
+        <property name="branch_address" column="branch_address" type="string"></property>
+        <property name="branch_city" column="branch_city" type="string"></property>
+        <property name="branch_state" column="branch_state" type="string"></property>
+        <property name="branch_zip" column="branch_zip" type="integer"></property>
+        <property name="branch_country" column="branch_country" type="string"></property>
+        <property name="branch_contact1" column="branch_contact1" type="integer"></property>
+        <property name="branch_contact2" column="branch_contact2" type="integer"></property>
+        <property name="branch_email" column="branch_email" type="string"></property> 
+        <property name="company_id" column="company_id" type="integer"></property>
+    </class>
+
+</hibernate-mapping>

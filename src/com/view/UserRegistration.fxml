@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.collections.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" fx:id="userreg" prefHeight="461.0" prefWidth="456.0" stylesheets="@../aviara/style/style.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.aviara.controller.UserRegistrationController">
+   <children>
+      <Pane layoutX="4.0" layoutY="5.0" prefHeight="448.0" prefWidth="454.0">
+         <children>
+            <Pane id="top_section1" layoutX="-5.0" layoutY="1.0" maxHeight="50.0" minHeight="18.0" prefHeight="32.0" prefWidth="458.0">
+               <children>
+                  <Label id="close-btn" fx:id="close_btn" layoutX="401.0" layoutY="-7.0" onMouseClicked="#close_window" onMouseEntered="#rotate" prefHeight="42.0" prefWidth="38.0" />
+                  <Label id="label1" layoutX="4.0" layoutY="2.0" prefHeight="25.0" prefWidth="170.0" text="User Registration Details" />
+                  <Pane id="top1" layoutX="-1.0" layoutY="31.0" maxHeight="25.0" minHeight="10.0" prefHeight="15.0" prefWidth="458.0" />
+               </children>
+            </Pane>
+            <Pane fx:id="emp_main" layoutX="-1.0" layoutY="47.0" prefHeight="396.0" prefWidth="461.0">
+               <children>
+                  <Pane prefHeight="360.0" prefWidth="456.0">
+                     <children>
+                        <Pane id="info_panel" layoutX="7.0" layoutY="55.0" prefHeight="301.0" prefWidth="440.0">
+                           <children>
+                              <Label layoutX="26.0" layoutY="14.0" prefHeight="25.0" prefWidth="104.0" text="User Name:" />
+                              <TextField fx:id="username" layoutX="187.0" layoutY="16.0" prefHeight="21.0" prefWidth="218.0" />
+                              <Label layoutX="24.0" layoutY="49.0" prefHeight="25.0" prefWidth="108.0" text="New Password:" />
+                              <TextField fx:id="password" layoutX="188.0" layoutY="51.0" prefHeight="21.0" prefWidth="218.0" />
+                              <Label layoutX="25.0" layoutY="211.0" prefHeight="25.0" prefWidth="132.0" text="Security Question2:" />
+                              <Label layoutX="24.0" layoutY="87.0" prefHeight="25.0" prefWidth="134.0" text="Conform Password:" />
+                              <TextField fx:id="conf_password" layoutX="188.0" layoutY="89.0" prefHeight="21.0" prefWidth="218.0" />
+                              <Label layoutX="26.0" layoutY="127.0" prefHeight="25.0" prefWidth="131.0" text="Security Question1:" />
+                              <TextField fx:id="seq_ans1" layoutX="188.0" layoutY="171.0" prefHeight="21.0" prefWidth="216.0" />
+                              <TextField fx:id="seq_ans2" layoutX="187.0" layoutY="263.0" prefHeight="21.0" prefWidth="212.0" />
+                              <ComboBox fx:id="seq_question1" layoutX="189.0" layoutY="127.0" prefHeight="25.0" prefWidth="214.0" promptText="----select----">
+                                 <items>
+                                    <FXCollections fx:factory="observableArrayList">
+                                       <String fx:value="What is your Nick Name?" />                                                   
+                                    </FXCollections>
+                                 </items>
+                              </ComboBox>
+                              <ComboBox fx:id="seq_question2" layoutX="187.0" layoutY="211.0" prefHeight="25.0" prefWidth="218.0" promptText="----select----">
+                                 <items>
+                                    <FXCollections fx:factory="observableArrayList">
+                                       <String fx:value="what is your Pet Name?" />
+                                      
+                                                </FXCollections>
+                                 </items>
+                              </ComboBox>
+                              <Label layoutX="26.0" layoutY="169.0" prefHeight="25.0" prefWidth="131.0" text="Answer" />
+                              <Label layoutX="26.0" layoutY="259.0" prefHeight="25.0" prefWidth="131.0" text="Answer" />
+                           </children>
+                        </Pane>
+                        <Label id="title" layoutX="14.0" layoutY="14.0" text="Enter Login Details" />
+                     </children>
+                  </Pane>
+                  <Button id="Button1" layoutX="223.0" layoutY="359.0" mnemonicParsing="false" onAction="#saveRegAll" prefHeight="32.0" prefWidth="115.0" text="Save &amp; Next" />
+                  <Button id="Button1" layoutX="344.0" layoutY="359.0" mnemonicParsing="false" prefHeight="28.0" prefWidth="103.0" text="Cancel" />
+               </children>
+            </Pane>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>

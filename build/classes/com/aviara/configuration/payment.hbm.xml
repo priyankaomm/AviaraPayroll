@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE hibernate-mapping SYSTEM "hibernate-mapping-3.0.dtd" >
+  
+<hibernate-mapping>
+<class name="com.aviara.bean.PaymentDetails" table="emp_payment">
+      <id name="id" column="id" type="integer"> 
+          <generator class="increment"></generator> 
+      </id> 
+        <property name="emp_type" column="emp_type" type="string"></property> 
+        <property name="basicSal" column="basicSal" type="double"></property>   
+        <property name="duration" column="duration" type="string"></property> 
+        <property name="hra" column="hra" type="double"></property> 
+        <property name="other" column="otherAllowance" type="double"></property> 
+        <property name="total" column="totalSal" type="double"></property> 
+        <property name="nextPay" column="nextPay" type="date"></property>
+        <property name="incDate" column="incDate" type="date"></property>  
+        <property name="emp_id" column="emp_id" type="string"></property>
+    </class>
+  
+</hibernate-mapping>

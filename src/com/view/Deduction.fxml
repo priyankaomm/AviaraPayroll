@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane fx:id="view_deduction" prefHeight="342.0" prefWidth="367.0" stylesheets="@../aviara/style/style.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.aviara.controller.DeductionController">
+   <children>
+      <Pane layoutX="-1.0" prefHeight="344.0" prefWidth="368.0">
+         <children>
+            <Pane id="top_section1" prefHeight="55.0" prefWidth="367.0">
+               <children>
+                  <Label id="title" layoutY="6.0" text="Deduction">
+                     <font>
+                        <Font size="17.0" />
+                     </font>
+                  </Label>
+                  <Label id="close-btn" fx:id="close_btn" layoutX="325.0" layoutY="-4.0" onMouseClicked="#close_window" onMouseEntered="#rotate" prefHeight="38.0" prefWidth="35.0" />
+               </children>
+            </Pane>
+            <Pane id="top1" layoutY="31.0" prefHeight="15.0" prefWidth="368.0" />
+            <TableView fx:id="view_deduc" layoutX="33.0" layoutY="90.0" prefHeight="234.0" prefWidth="308.0">
+              <columns>
+                <TableColumn fx:id="col1" prefWidth="135.0" text="Deduction Name" />
+                  <TableColumn fx:id="col2" prefWidth="172.0" text="Deduction Percentage(%)" />
+              </columns>
+            </TableView>
+         </children>
+      </Pane>
+      <Pane layoutX="1.0" layoutY="46.0" prefHeight="42.0" prefWidth="361.0">
+         <children>
+            <Pane id="add_emp_panel" layoutX="18.0" layoutY="1.0" prefHeight="42.0" prefWidth="78.0">
+               <children>
+                  <Label id="add_emp" layoutX="1.0" layoutY="1.0" onMouseClicked="#openAddDeduction" prefHeight="38.0" prefWidth="78.0" text="Add" />
+               </children>
+            </Pane>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>

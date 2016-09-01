@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--<!DOCTYPE hibernate-mapping PUBLIC
+  "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+  "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">-->
+  <!DOCTYPE hibernate-mapping SYSTEM "hibernate-mapping-3.0.dtd" >
+
+<hibernate-mapping>
+   <class name="com.aviara.bean.Employee" table="employee">
+      <id name="emp_id" column="emp_id" type="string"> 
+          <generator class="assigned"></generator> 
+      </id> 
+        <property name="firstName" column="first_name" type="string"></property> 
+        <property name="device_id" column="device_id" type="string"></property> 
+        <property name="midName" column="mid_name" type="string"></property>   
+        <property name="lastName" column="last_name" type="string"></property> 
+        <property name="dob" column="dob" type="date"></property> 
+        <property name="doj" column="doj" type="date"></property>   
+        <property name="gender" column="gender" type="string"></property> 
+        <property name="designation" column="designation" type="string"></property> 
+        <!--<property name="qualification" column="qualification" type="string"></property> 
+        <property name="exp" column="experiance" type="string"></property> -->
+        <property name="branch" column="branch" type="string"></property> 
+        <property name="department" column="dept" type="string"></property>
+        <property name="dor" column="date_of_resignation" type="date"></property> 
+        <property name="lastPayment" column="lastPayment" type="date"></property>  
+    </class>
+  
+
+</hibernate-mapping>

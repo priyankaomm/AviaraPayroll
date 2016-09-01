@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE hibernate-mapping SYSTEM "hibernate-mapping-3.0.dtd" >
+
+<hibernate-mapping>
+
+   <class name="com.aviara.bean.Department" table="department_info">
+      <id name="dept_id" column="dept_id" type="integer"> 
+          <generator class="increment"></generator> 
+      </id> 
+        <property name="dept_name" column="dept_name" type="string"></property> 
+        <property name="ot_status" column="ot_status" type="string"></property>
+        <property name="rate" column="ot_rate" type="double"></property>
+      </class>
+
+</hibernate-mapping>

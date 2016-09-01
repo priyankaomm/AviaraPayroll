@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE hibernate-mapping SYSTEM "hibernate-mapping-3.0.dtd" >
+  
+<hibernate-mapping>
+<class name="com.aviara.bean.AttendanceLogs" table="attendancelogs">
+      <id name="id" column="id" type="integer"> 
+          <generator class="assigned"></generator> 
+      </id> 
+        <property name="emp_id" column="emp_id" type="string"></property> 
+        <property name="device_id" column="device_id" type="string"></property> 
+        <property name="attendanceDate" column="attendanceDate" type="date"></property> 
+        <property name="inTime" column="inTime" type="string"></property>   
+        <property name="outTime" column="outTime" type="string"></property> 
+        <property name="present" column="present" type="integer"></property> 
+        <property name="absent" column="absent" type="integer"></property>
+        <property name="status" column="status" type="string"></property>  
+    </class>
+  
+</hibernate-mapping>
